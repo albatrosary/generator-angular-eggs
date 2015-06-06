@@ -17,5 +17,5 @@ exports = module.exports = function(app) {
 
   app.delete('/api/register/:id', function(req, res) {
     // something
-  }
+  });
 };
