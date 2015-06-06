@@ -1,5 +1,5 @@
 // Generated on 2015-04-16 using
-// generator-angular-egg 0.0.1
+// generator-angular-eggs 0.0.1
 'use strict';
 
 module.exports = function (grunt) {

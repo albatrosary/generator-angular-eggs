@@ -5,7 +5,7 @@ Options:
     Bootstrap: Include Bootstrap for Sass
 
 Example:
-    yo angular-egg
+    yo angular-eggs
 
     This will create:
         Gruntfile.js: Configuration for the task runner.

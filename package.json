@@ -1,5 +1,5 @@
 {
-  "name": "generator-angular-egg",
+  "name": "generator-angular-eggs",
   "version": "0.0.1",
   "description": "Angular and Angular new Router with an Express server",
   "license": "BSD",
@@ -10,10 +10,10 @@
   },
   "repository": {
     "type": "git",
-    "url": "git://github.com/albatrosary/generator-angular-egg.git"
+    "url": "git://github.com/albatrosary/generator-angular-eggs.git"
   },
   "bugs": {
-    "url": "https://github.com/albatrosary/generator-angular-egg/issues"
+    "url": "https://github.com/albatrosary/generator-angular-eggs/issues"
   },
   "main": "app/index.js",
   "scripts": {

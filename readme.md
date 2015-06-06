@@ -1,4 +1,4 @@
-# Angular app generator [![Build Status](https://secure.travis-ci.org/albatrosary/generator-angular-egg.svg?branch=master)](http://travis-ci.org/albatrosary/generator-angular-egg)
+# Angular app generator [![Build Status](https://secure.travis-ci.org/albatrosary/generator-angular-eggs.svg?branch=master)](http://travis-ci.org/albatrosary/generator-angular-eggs)
 
 This generator are using Angular1, NewRouter and Express on Node.js. Angular we have emphasized the development life cycle.It supports the next thing for that.
 
@@ -11,7 +11,7 @@ This generator are using Angular1, NewRouter and Express on Node.js. Angular we 
 
 ## Usage
 
-Install: `npm install -g generator-angular-egg`
+Install: `npm install -g generator-angular-eggs`
 
 Make a new directory and `cd` into it:
 ```
@@ -19,19 +19,19 @@ mkdir [app-name] && cd $_
 ```
 This [app-name] is used as ng-app="[app-name]"
 
-Run `yo angular-egg`:
+Run `yo angular-eggs`:
 ```
-yo angular-egg
+yo angular-eggs
 ```
 
 ## Generators
 
 Available generators:
 
-- angular-egg:components [name]
-- angular-egg:service [name]
-- angular-egg:directive [name]
-- angular-egg:server [name]
+- angular-eggs:components [name]
+- angular-eggs:service [name]
+- angular-eggs:directive [name]
+- angular-eggs:server [name]
 
 ## Tasks
 

@@ -5,7 +5,7 @@ var helpers = require('yeoman-generator').test;
 var assert = require('yeoman-generator').assert;
 var _ = require('underscore');
 
-describe('Angular Edge generator', function () {
+describe('Angular Eggs generator', function () {
   // not testing the actual run of generators yet
   it('the generator can be required without throwing', function () {
     this.app = require('../app');
