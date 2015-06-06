@@ -1,0 +1,51 @@
+{
+  "name": "generator-angular-egg",
+  "version": "0.0.1",
+  "description": "Angular and Angular new Router with an Express server",
+  "license": "BSD",
+  "author": {
+    "name": "Fumio SAGAWA",
+    "email": "fumio.sagawa@gmail.com",
+    "url": "http://www.ashiras.xyz"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/albatrosary/generator-angular-egg.git"
+  },
+  "bugs": {
+    "url": "https://github.com/albatrosary/generator-angular-egg/issues"
+  },
+  "main": "app/index.js",
+  "scripts": {
+    "test": "mocha --reporter spec"
+  },
+  "files": [
+    "app"
+  ],
+  "keywords": [
+    "yeoman-generator",
+    "web",
+    "app",
+    "front-end",
+    "h5bp",
+    "modernizr",
+    "jquery",
+    "grunt",
+    "angular",
+    "angular-new-router"
+  ],
+  "dependencies": {
+    "chalk": "^1.0.0",
+    "cheerio": "^0.18.0",
+    "yeoman-generator": "^0.18.9",
+    "yosay": "^1.0.2"
+  },
+  "devDependencies": {
+    "grunt-cli": "^0.1.13",
+    "mocha": "*",
+    "underscore": "^1.6.0"
+  },
+  "peerDependencies": {
+    "generator-mocha": ">=0.1.0"
+  }
+}
