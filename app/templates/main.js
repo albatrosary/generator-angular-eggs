@@ -22,7 +22,7 @@
     '<%= appname %>.about',
     '<%= appname %>.contact',
     ])
-    .config('AppConfig', AppConfig)
+    .config(AppConfig)
     .controller('AppController', AppController);
 
   AppController.$routeConfig = [
