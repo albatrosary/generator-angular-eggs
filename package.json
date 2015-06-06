@@ -1,6 +1,6 @@
 {
   "name": "generator-angular-eggs",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Angular and Angular new Router with an Express server",
   "license": "BSD",
   "author": {
@@ -32,7 +32,8 @@
     "jquery",
     "grunt",
     "angular",
-    "angular-new-router"
+    "angular-new-router",
+    "express"
   ],
   "dependencies": {
     "chalk": "^1.0.0",
