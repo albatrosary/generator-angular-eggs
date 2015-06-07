@@ -40,6 +40,27 @@
              '!<%%= paths.app %>/styles/main.css']
           ]
       }
+    },
+    test: {
+      options: {
+        template: '<%%= paths.karma.config %>',
+        transform: function(filePath) {
+          filePath = filePath.replace('/app/', 'app/');
+          filePath = filePath.replace('/.tmp/', '.tmp/');
+          filePath = filePath.replace('/test/', 'test/');
+          return '\'' + filePath + '\',';
+        },
+        starttag: '// injector:js',
+        endtag: '// endinjector'
+      },
+      files: {
+        '<%%= paths.karma.config %>': [
+            ['<%%= paths.app %>/**/*.js',
+             '!<%%= paths.app %>/scripts/main.js'],
+            ['test/**/*.js',
+             '!test/karma.conf.js']
+          ]
+      }
     }
   };
 })();

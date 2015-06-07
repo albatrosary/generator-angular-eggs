@@ -17,10 +17,12 @@ module.exports = function(config) {
 
     // list of files / patterns to load in the browser
     files: [
-      'app/main.js',
-      'app/**/*.js',
-      'test/**/*.mock.js',
-      'test/**/*.spec.js',
+      // bower:js
+      // endbower
+      // injector:js
+      // endinjector
+      'app/scripts/main.js',
+      'test/main.spec.js'
     ],
 
 

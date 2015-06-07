@@ -14,7 +14,10 @@ module.exports = function (grunt) {
     // Configurable paths
     paths: {
       app: 'app',
-      dist: 'dist'
+      dist: 'dist',
+      karma: {
+        config: 'test/karma.conf.js'
+      }
     },
     pkg: grunt.file.readJSON('package.json'),
     jshintrc: {
@@ -58,15 +61,21 @@ module.exports = function (grunt) {
   grunt.registerTask('test', function (target) {
     if (target === 'watch') {
       grunt.task.run([
+        'wiredep:test',
+        'injector:test',
         'karma:watch'
       ]);
     } else if (target === 'coverage') {
       grunt.task.run([
+        'wiredep:test',
+        'injector:test',
         'karma:single',
         'browserSync:coverage'
       ]);
     } else {
       grunt.task.run([
+        'wiredep:test',
+        'injector:test',
         'karma:single'
       ]);
     }

@@ -1,9 +1,9 @@
 (function(){
   'use strict';
 
-  describe('Controller: BooksController', function () {
+  describe('Controller: AppController', function () {
 
-    beforeEach(module('app'));
+    beforeEach(module('<%= appname %>'));
 
     var AppController;
 
@@ -12,8 +12,8 @@
     }));
 
     describe('AppController',function(){
-      it('存在チェック', function () {
-        expect(AppController).not.toBeUndefined();
+      it('Test Case', function () {
+
       });
     });
   });
