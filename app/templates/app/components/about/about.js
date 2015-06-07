@@ -2,7 +2,7 @@
  * 
  *
  * @deprecated 
- * @module components/contact
+ * @module components/about
  */
 (function () {
   'use strict';

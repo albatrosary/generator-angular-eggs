@@ -45,6 +45,7 @@ module.exports = function (grunt) {
       'clean:server',
       'injector',
       'wiredep',
+      'jshint',
       'concurrent:server',
       'autoprefixer',
       'express:dev',
@@ -69,6 +70,7 @@ module.exports = function (grunt) {
       grunt.task.run([
         'wiredep:test',
         'injector:test',
+        'jshint',
         'karma:single',
         'browserSync:coverage'
       ]);
@@ -76,6 +78,7 @@ module.exports = function (grunt) {
       grunt.task.run([
         'wiredep:test',
         'injector:test',
+        'jshint',
         'karma:single'
       ]);
     }

@@ -9,9 +9,9 @@
     all: [
       'Gruntfile.js',
       '<%%= paths.app %>/{,*/}**/*.js',
-      //'!<%= config.app %>/scripts/vendor/*',
       'test/{,**/}*.js',
-      'e2e/{,**/}*.js'
+      'e2e/{,**/}*.js',
+      'server/{,**/}*.js'
     ]
   };
 })();

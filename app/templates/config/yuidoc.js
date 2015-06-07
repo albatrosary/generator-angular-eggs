@@ -8,7 +8,7 @@
       version: '<%%= pkg.version %>',
       url: '<%%= pkg.homepage %>',
       options: {
-        paths: ['<%%= paths.app %>/components', '<%%= paths.app %>/service', '<%%= paths.app %>/directives'],
+        paths: ['<%%= paths.app %>/components'],
         outdir: 'docs'
       }
     }
