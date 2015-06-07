@@ -8,6 +8,7 @@ module.exports = yeoman.generators.Base.extend({
   constructor: function () {
     yeoman.generators.Base.apply(this, arguments);
     this.pkg = require('../package.json');
+    this.appname = this.appname.replace(/\s+/g, '');
   },
 
   askFor: function () {
