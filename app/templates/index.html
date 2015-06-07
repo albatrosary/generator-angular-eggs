@@ -26,22 +26,13 @@
       <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
     <![endif]-->
 
-    <div class="container">
-      <div class="header">
-        <ul class="nav nav-pills pull-right">
-          <li><a ng-link="home">Home</a></li>
-          <li><a ng-link="about">About</a></li>
-          <li><a ng-link="contact">Contact</a></li>
-        </ul>
-        <h3 class="text-muted"><%= appname %></h3>
-      </div>
+    <div ng-include="'components/header/header.html'"></div>
 
+    <div class="container">
 
       <div ng-viewport></div>
 
-      <div class="footer">
-        <p><span class="glyphicon glyphicon-heart"></span> from the albatrosary</p>
-      </div>
+      <div ng-include="'components/footer/footer.html'"></div>
 
     </div>
 
