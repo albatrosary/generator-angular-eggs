@@ -6,18 +6,31 @@
 
   <div class="row marketing">
     <div class="col-lg-6">
+      <h4><a href="https://angularjs.org/">Angular1.4</a></h4>
+      <p>HTML is great for declaring static documents, but it falters when we try to use it for declaring dynamic views in web-applications. AngularJS lets you extend HTML vocabulary for your application. The resulting environment is extraordinarily expressive, readable, and quick to develop.</p>
+    </div>
+    <div class="col-lg-6">
+      <h4><a href="https://angular.github.io/router/">Angular New Router</a></h4>
+      <p>The new router's API is a bit unfinished, but it will work against Angular 1.4 and 2.0. This is nice because the router provides a kind of MVC bridge between the two technology stacks.</p>
+    </div>
+    <div class="col-lg-6">
+      <h4><a href="http://expressjs.com/">Express</a></h4>
+      <p>Express is a minimal and flexible Node.js web application framework that provides a robust set of features for web and mobile applications.</p>
+    </div>
+    <div class="col-lg-6">
       <h4><a href="https://html5boilerplate.com/">HTML5 Boilerplate</a></h4>
       <p>HTML5 Boilerplate is a professional front-end template for building fast, robust, and adaptable web apps or sites.</p>
-
-      <% if (includeSass) { %><h4><a href="http://libsass.org/">Sass</a></h4>
+    </div><% if (includeSass) { %>
+    <div class="col-lg-6">
+      <h4><a href="http://libsass.org/">Sass</a></h4>
       <p>Sass is a mature, stable, and powerful professional grade CSS extension language.</p>
-      <% } %>
-
+    </div><% } %>
+    <div class="col-lg-6">
       <h4><a href="http://getbootstrap.com/">Bootstrap</a></h4>
       <p>Sleek, intuitive, and powerful mobile first front-end framework for faster and easier web development.</p>
-
-      <% if (includeModernizr) { %><h4><a href="http://modernizr.com/">Modernizr</a></h4>
+    </div><% if (includeModernizr) { %>
+    <div class="col-lg-6">
+      <h4><a href="http://modernizr.com/">Modernizr</a></h4>
       <p>Modernizr is an open-source JavaScript library that helps you build the next generation of HTML5 and CSS3-powered websites.</p>
-      <% } %>
-    </div>
+    </div><% } %>
   </div>
