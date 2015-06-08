@@ -13,8 +13,11 @@
    * @class AboutController
    * @constructor
    */
-  function AboutController() {
-  	console.log('AboutController Constructor');
+  function AboutController(GruntfilesService) {
+    
+    console.log('AboutController Constructor');
+  
+    this.GruntfilesService = GruntfilesService;
   }
 
   /**
@@ -30,11 +33,21 @@
   * @return {Boolean} Returns true on success
   */
   AboutController.prototype.activate = function() {
-  	console.log('AboutController activate Method');
+    
+    var _self = this;
+
+    return this.GruntfilesService.query().$promise.then(
+      function(list){
+      _self.list = list;
+    }).catch(function(e){
+      console.log(e);
+    });
   };
 
-  angular.module('<%= appname %>.about', [])
+  angular.module('<%= appname %>.about', [
+    '<%= appname %>.service.gruntfiles'
+  ])
     .controller('AboutController', AboutController);
 
-  AboutController.$inject = [];
+  AboutController.$inject = ['GruntfilesService'];
 })();

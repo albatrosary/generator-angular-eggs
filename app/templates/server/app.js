@@ -22,7 +22,7 @@ server.listen(port,process.env.OPENSHIFT_NODEJS_IP || process.env.IP || undefine
 });
 
 // API definition
-require('./api/register')(app);
+require('./api/gruntfiles')(app);
 
 exports = module.exports = app;
 

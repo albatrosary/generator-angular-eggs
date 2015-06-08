@@ -13,7 +13,6 @@
     }));
 
     describe('someThing',function(){
-      var MATCH_UP = 'MATCH_UP';
       it('someThing',function(){
 
       });

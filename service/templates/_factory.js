@@ -10,12 +10,12 @@
     
     var someProperty={};
 
-    var cartitemService = {
+    var <%= name %>Service = {
       someMethod: function () {
         return;
       }
     };
-    return cartitemService;
+    return <%= name %>Service;
   }
 
   angular.module('<%= appname %>.service.<%= name %>',[

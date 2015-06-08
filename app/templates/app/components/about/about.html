@@ -1,1 +1,25 @@
-about
+<div class="panel panel-default">
+  <!-- Default panel contents -->
+  <div class="panel-heading">Grunt <small>The JavaScript Task Runner</small></div>
+  <div class="panel-body">
+    <p>The following tasks are available for this project:</p>
+  </div>
+
+  <!-- Table -->
+  <table class="table">
+    <thead>
+      <tr>
+        <th>Tools</th>
+        <th>Version</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr ng-repeat="list in about.list">
+        <th scope="row">{{list.name}}</th>
+        <td>{{list.version}}</td>
+        <td>{{list.desc}}</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
