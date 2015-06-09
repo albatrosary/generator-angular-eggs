@@ -1,4 +1,4 @@
-# Angular app generator [![Build Status](https://secure.travis-ci.org/albatrosary/generator-angular-eggs.svg?branch=master)](http://travis-ci.org/albatrosary/generator-angular-eggs)
+# Angular app generator [![NPM version](https://img.shields.io/npm/v/generator-angular-eggs.svg?style=flat-square)](https://npmjs.org/package/generator-angular-eggs) [![Build Status](https://secure.travis-ci.org/albatrosary/generator-angular-eggs.svg?branch=master)](http://travis-ci.org/albatrosary/generator-angular-eggs)
 
 This generator are using Angular1, NewRouter and Express on Node.js. Angular we have emphasized the development life cycle.It supports the next thing for that.
 
