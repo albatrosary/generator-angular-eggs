@@ -1,6 +1,6 @@
 {
   "name": "generator-angular-eggs",
-  "version": "0.0.7",
+  "version": "0.0.8",
   "description": "Angular and Angular new Router with an Express server",
   "license": "BSD",
   "author": {
@@ -20,7 +20,12 @@
     "test": "mocha --reporter spec"
   },
   "files": [
-    "app"
+    "app",
+    "components",
+    "directives",
+    "service",
+    "server",
+    "test"
   ],
   "keywords": [
     "yeoman-generator",
