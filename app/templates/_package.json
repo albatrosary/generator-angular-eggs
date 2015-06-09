@@ -36,6 +36,7 @@
     "karma": "^0.12.36",
     "karma-coverage": "^0.3.1",
     "karma-jasmine": "^0.3.5",
+    "phantomjs": "^1.9.17",
     "karma-phantomjs-launcher": "^0.2.0",
     "load-grunt-configs": "^0.4.3",
     "load-grunt-tasks": "^3.2.0",
@@ -44,14 +45,13 @@
     "time-grunt": "^1.2.0"
   },
   "scripts": {
-    "install": "./node_modules/protractor/bin/webdriver-manager update" 
+    "install": "node ./node_modules/protractor/bin/webdriver-manager update" 
   },
   "engines": {
     "node": ">=0.12.0"
   },
   "dependencies": {
     "body-parser": "^1.12.3",
-    "express": "^4.12.3",
-    "mermaid": "^0.4.0"
+    "express": "^4.12.3"
   }
 }
