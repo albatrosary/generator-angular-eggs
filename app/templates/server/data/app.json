@@ -180,6 +180,11 @@
     "desc": "Load multiple grunt tasks using globbing patterns"
   },
   {
+    "name": "phantomjs",
+    "version": "^1.9.17",
+    "desc": "Headless WebKit with JS API"
+  },
+  {
   	"name": "protractor",
   	"version": "^2.1.0",
     "desc": "Webdriver E2E test wrapper for Angular."
