@@ -47,9 +47,10 @@
     "coveralls": "^2.11.2",
     "jscoverage": "^0.5.9",
     "mocha-lcov-reporter": "0.0.2",
-    "yeoman-generator": "^0.20.1",
-    "yosay": "^1.0.2",
+    "yeoman-generator": "^0.18.9",
+    "yosay": "^1.0.4",
     "mocha": "~2.2.5",
+    "coveralls": "~2.11.0",
     "istanbul": "~0.3.14"
   },
   "devDependencies": {
