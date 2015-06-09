@@ -28,10 +28,10 @@ yo angular-eggs
 
 Available generators:
 
-- angular-eggs:components [name]
-- angular-eggs:service [name]
-- angular-eggs:directive [name]
-- angular-eggs:server [name]
+- yo angular-eggs:components [name]
+- yo angular-eggs:service [name]
+- yo angular-eggs:directives [name]
+- yo angular-eggs:server [name]
 
 ## Tasks
 
