@@ -36,17 +36,17 @@ Available generators:
 - yo angular-eggs:server [name]
  
 
-### components
+### Components
 
-Generates an AngularJS service.
+Generates an Angular Components.
 
 Example:
 
 ```
 yo angular:components mycomponent
 ```
-Produces `app/components/mycomponent/mycomponent.js`:
 
+Produces `app/components/mycomponent/mycomponent.js`:
 ```javascript
 (function () {
   'use strict';
