@@ -34,6 +34,68 @@ Available generators:
 - yo angular-eggs:service [name]
 - yo angular-eggs:directives [name]
 - yo angular-eggs:server [name]
+ 
+
+### Components
+
+Generates an Angular Components.
+
+Example:
+
+```
+yo angular:components mycomponent
+```
+
+Produces `app/components/mycomponent/mycomponent.js`:
+```javascript
+(function () {
+  'use strict';
+  
+  angular
+    .module('app-name.mycomponent', [])
+    .service('MycomponentController', MycomponentController);
+  
+  MycomponentController.$inject = [];
+  
+  function MycomponentController() {
+    ...
+  }
+  
+  MycomponentController.prototype.activate = function() {
+    ...
+  };
+  
+})();
+```
+
+Produces `app/components/mycomponent/mycomponent.html`:
+```html
+<div>mycomponent.html</div>
+```
+
+Produces `test/components/mycomponent/mycomponent.spec.js`:
+```javascript
+(function(){
+  'use strict';
+
+  describe('Controller: MycomponentController', function () {
+
+    beforeEach(module('app-name'));
+
+    var MycomponentController;
+
+    beforeEach(inject(function ($controller) {
+      MycomponentController = $controller('MycomponentController');
+    }));
+
+    describe('MycomponentController',function(){
+      it('Test Case', function () {
+
+      });
+    });
+  });
+})();
+```
 
 ## Tasks
 
