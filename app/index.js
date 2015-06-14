@@ -132,7 +132,8 @@ module.exports = yeoman.generators.Base.extend({
 
     this.write('app/index.html', this.indexFile);
 
-    this.copy('main.js', 'app/scripts/main.js');
+    this.copy('main.js',   'app/scripts/main.js');
+    this.copy('config.js', 'app/scripts/config.js');
   },
   config: function () {
     this.directory('config');
