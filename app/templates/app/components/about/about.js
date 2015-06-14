@@ -7,6 +7,14 @@
 (function () {
   'use strict';
 
+  angular
+    .module('<%= appname %>.about', [
+      '<%= appname %>.service.gruntfiles'
+    ])
+    .controller('AboutController', AboutController);
+
+  AboutController.$inject = ['GruntfilesService'];
+
   /**
    * AboutController
    *
@@ -14,7 +22,6 @@
    * @constructor
    */
   function AboutController(GruntfilesService) {
-    
     console.log('AboutController Constructor');
   
     this.GruntfilesService = GruntfilesService;
@@ -33,21 +40,35 @@
   * @return {Boolean} Returns true on success
   */
   AboutController.prototype.activate = function() {
-    
-    var _self = this;
+    console.log('AboutController Method activate');
 
-    return this.GruntfilesService.query().$promise.then(
-      function(list){
-      _self.list = list;
-    }).catch(function(e){
-      console.log(e);
-    });
+    vm = this;
+    var grunt = this.GruntfilesService.query().$promise;
+    grunt
+      .then(setlist)
+      .catch(error);
+  };
+  
+  /**
+   * Static property
+   */
+
+  /**
+   * Static method, assigned to class
+   */
+
+  /**
+   * Private property
+   */
+  var vm;
+
+  /**
+   * Private Method
+   */
+  var setlist = function (list) {
+    vm.list = list;
   };
 
-  angular.module('<%= appname %>.about', [
-    '<%= appname %>.service.gruntfiles'
-  ])
-    .controller('AboutController', AboutController);
-
-  AboutController.$inject = ['GruntfilesService'];
+  var error = function () {
+  };
 })();

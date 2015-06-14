@@ -54,7 +54,7 @@
   },
   "devDependencies": {
     "grunt-cli": "^0.1.13",
-    "underscore": "^1.8.3"
+    "lodash": "^3.9.3" 
   },
   "peerDependencies": {}
 }

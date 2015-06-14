@@ -7,6 +7,11 @@
 (function () {
   'use strict';
 
+  angular
+    .module('<%= appname %>.<%= name %>', [])
+    .controller('<%= className %>Controller', <%= className %>Controller);
+
+  <%= className %>Controller.$inject = [];
   /**
    * AboutController
    *
@@ -15,6 +20,7 @@
    */
   function <%= className %>Controller() {
   	console.log('<%= className %>Controller Constructor');
+    vm = this;
   }
 
   /**
@@ -27,8 +33,22 @@
   	console.log('<%= className %>Controller activate Method');
   };
 
-  angular.module('<%= appname %>.<%= name %>', [])
-    .controller('<%= className %>Controller', <%= className %>Controller);
 
-  <%= className %>Controller.$inject = [];
+  /**
+   * Static property
+   */
+
+  /**
+   * Static method, assigned to class
+   */
+
+  /**
+   * Private property
+   */
+  var vm;
+
+  /**
+   * Private Method
+   */
+
 })();

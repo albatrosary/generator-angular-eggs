@@ -3,7 +3,7 @@
 var path = require('path');
 var helpers = require('yeoman-generator').test;
 var assert = require('yeoman-generator').assert;
-var _ = require('underscore');
+var _ = require('lodash');
 
 describe('Angular Eggs generator', function () {
   // not testing the actual run of generators yet
@@ -36,6 +36,8 @@ describe('Angular Eggs generator', function () {
       'skip-message': true
     };
 
+
+
     var runGen;
 
     beforeEach(function () {
@@ -44,6 +46,9 @@ describe('Angular Eggs generator', function () {
         .inDir(path.join(__dirname, '.tmp'))
         .withGenerators([[helpers.createDummyGenerator(), 'mocha:app']]);
     });
+
+
+    console.log(path.join(__dirname, '../app'));  
 
     it('creates expected files', function (done) {
       runGen.withOptions(options).on('end', function () {

@@ -1,6 +1,12 @@
 (function () {
   'use strict';
   
+  angular
+    .module('<%= appname %>.service.<%= name %>',[])
+    .factory('<%= className %>Service', <%= className %>Service);
+
+  <%= className %>Service.$inject = [];
+
   /**
    * 
    * @class <%= className %>Service
@@ -18,11 +24,6 @@
     return <%= name %>Service;
   }
 
-  angular.module('<%= appname %>.service.<%= name %>',[
-    '<%= appname %>.service.<%= name %>'
-  ]).factory('<%= className %>Service', <%= className %>Service);
-
-  <%= className %>Service.$inject = [];
 })();
 
 

@@ -3,7 +3,7 @@
 
   describe('Controller: HomeController', function () {
 
-    beforeEach(module('<%= appname %>'));
+    beforeEach(module('<%= appname %>.home'));
 
     var HomeController;
 

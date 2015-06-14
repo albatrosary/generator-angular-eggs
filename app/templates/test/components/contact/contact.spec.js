@@ -3,7 +3,7 @@
 
   describe('Controller: ContactController', function () {
 
-    beforeEach(module('<%= appname %>'));
+    beforeEach(module('<%= appname %>.contact'));
 
     var ContactController;
 

@@ -2,7 +2,7 @@
 
 describe('Directive: <%= name %>Directive', function () {
 
-  beforeEach(module('<%= appname %>'));
+  beforeEach(module('<%= appname %>.directive.<%= name %>'));
 
   var element, scope, $rootScope, $compile;
   var compareHTML   = '';

@@ -7,6 +7,12 @@
 (function () {
   'use strict';
 
+  angular
+    .module('<%= appname %>.home', [])
+    .controller('HomeController', HomeController);
+
+  HomeController.$inject = [];
+  
   /**
    * HomeController
    *
@@ -33,8 +39,4 @@
     console.log('HomeController activate Method');
   };
 
-  angular.module('<%= appname %>.home', [])
-    .controller('HomeController', HomeController);
-
-  HomeController.$inject = [];
 })();

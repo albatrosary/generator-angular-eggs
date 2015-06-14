@@ -7,6 +7,12 @@
 (function () {
   'use strict';
 
+  angular
+    .module('<%= appname %>.contact', [])
+    .controller('ContactController', ContactController);
+
+  ContactController.$inject = [];
+  
   /**
    * ContactController
    *
@@ -31,10 +37,29 @@
   */
   ContactController.prototype.activate = function() {
   	console.log('ContactController activate Method');
+    vm = this;
+    vm.case1 = 20;
+    someMethod();
   };
 
-  angular.module('<%= appname %>.contact', [])
-    .controller('ContactController', ContactController);
+  /**
+   * Static property
+   */
 
-  ContactController.$inject = [];
+  /**
+   * Static method, assigned to class
+   */
+
+  /**
+   * Private property
+   */
+   
+   var vm;
+
+  /**
+   * Private Method
+   */
+   var someMethod = function () {
+     vm.case2 = 10;
+   };
 })();

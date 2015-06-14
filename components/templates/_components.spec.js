@@ -3,7 +3,7 @@
 
   describe('Controller: <%= className %>Controller', function () {
 
-    beforeEach(module('<%= appname %>'));
+    beforeEach(module('<%= appname %>.<%= name %>'));
 
     var <%= className %>Controller;
 
