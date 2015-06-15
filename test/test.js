@@ -173,9 +173,10 @@ describe('Angular Eggs generator', function () {
           ['package.json', /modernizr/],
         ]);
 
-        assert.file([
+        assert.file([].concat(
+          expected,
           'config/modernizr.js'
-        ]);
+        ));
 
         done();
       });
@@ -201,11 +202,19 @@ describe('Angular Eggs generator', function () {
 
         assert.fileContent([
           ['package.json', /grunt-sass/],
-          ['config/watch.js', /sass/]
+          ['config/watch.js', /sass/],
+          ['config/concurrent.js', /sass:server/],
+          ['config/concurrent.js', /sass/]
         ]);
 
+        assert.file([].concat(
+          expected,
+          'app/styles/main.scss'
+        ));
+
         assert.noFileContent([
-          ['Gruntfile.js', /bootstrap-sass-official/]
+          ['Gruntfile.js', /bootstrap-sass-official/],
+          ['config/concurrent.js', /copy:styles/]
         ]);
 
         done();
@@ -218,9 +227,13 @@ describe('Angular Eggs generator', function () {
       }).on('end', function () {
 
         assert.fileContent([
-          ['app/index.html', /Sass is a mature/],
           ['bower.json', /bootstrap-sass-official/]
         ]);
+
+        assert.file([].concat(
+          expected,
+          'app/styles/main.scss'
+        ));
 
         done();
       });
