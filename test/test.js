@@ -14,7 +14,13 @@ describe('Angular Eggs generator', function () {
   describe('run test', function () {
 
     var expectedContent = [
+      ['.bowerrc', /"directory": "bower_components"/],
+      ['.editorconfig', /root = true/],
+      ['.gitattributes', /text=auto/],
+      ['.gitignore', /node_modules/],
+      ['.jshintrc', /"node": true/],
       ['bower.json', /"name": "tmp"/],
+      ['Gruntfile.js', /generator-angular-eggs/],
       ['package.json', /"private": true/]
     ];
     var expected = [
