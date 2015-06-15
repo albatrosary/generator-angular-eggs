@@ -21,9 +21,10 @@ describe('Angular Eggs generator', function () {
       '.editorconfig',
       '.gitignore',
       '.gitattributes',
-      'package.json',
+      '.jshintrc',
       'bower.json',
       'Gruntfile.js',
+      'package.json',
       'app/favicon.ico',
       'app/robots.txt',
       'app/index.html'
@@ -35,7 +36,6 @@ describe('Angular Eggs generator', function () {
       'skip-welcome-message': true,
       'skip-message': true
     };
-
 
 
     var runGen;
@@ -55,8 +55,89 @@ describe('Angular Eggs generator', function () {
 
         assert.file([].concat(
           expected,
-          'app/styles/main.css',
-          'app/scripts/main.js'
+          'app/components',
+          'app/components/about',
+          'app/components/about/about.html',
+          'app/components/about/about.js',
+          'app/components/contact',
+          'app/components/contact/contact.html',
+          'app/components/contact/contact.js',
+          'app/components/footer',
+          'app/components/footer/footer.html',
+          'app/components/header/header.html',
+          'app/components/home',
+          'app/components/home/home.html',
+          'app/components/home/home.js',
+          'app/images',
+          'app/scripts',
+          'app/scripts/main.js',
+          'app/scripts/config.js',
+          'app/service',
+          'app/service/gruntfiles/gruntfiles.js',
+          'app/styles'
+        ));
+
+        assert.file([].concat(
+          expected,
+          'config',
+          'config/autoprefixer.js',
+          'config/browserSync.js',
+          'config/clean.js',
+          'config/concurrent.js',
+          'config/copy.js',
+          'config/express.js',
+          'config/filerev.js',
+          'config/htmlmin.js',
+          'config/imagemin.js',
+          'config/injector.js',
+          'config/jshint.js',
+          'config/karma.js',
+          'config/plato.js',
+          'config/protractor.js',
+          'config/run.js',
+          'config/svgmin.js',
+          'config/usemin.js',
+          'config/useminPrepare.js',
+          'config/watch.js',
+          'config/wiredep.js',
+          'config/yuidoc.js'
+        ));
+
+        assert.file([].concat(
+          expected,
+          'e2e',
+          'e2e/spec',
+          'e2e/spec/exists.spec.js',
+          'e2e/pageObject.conf.js',
+          'e2e/protractor.conf.js'
+        ));
+
+        assert.file([].concat(
+          expected,
+          'server',
+          'server/api',
+          'server/api/gruntfiles.js',
+          'server/data',
+          'server/data/app.json',
+          'server/app.js'
+        ));
+
+        assert.file([].concat(
+          expected,
+          'test',
+          'test/components',
+          'test/components/about',
+          'test/components/about/about.spec.js',
+          'test/components/contact',
+          'test/components/contact/contact.spec.js',
+          'test/components/home',
+          'test/components/home/home.spec.js',
+          'test/service',
+          'test/service/gruntfiles',
+          'test/service/gruntfiles/gruntfiles.mock.js',
+          'test/service/gruntfiles/gruntfiles.spec.js',
+          'test/karma.conf.js',
+          'test/main.spec.js'
         ));
 
         assert.fileContent(expectedContent);
@@ -136,10 +217,10 @@ describe('Angular Eggs generator', function () {
         features: ['includeSass', 'includeBootstrap']
       }).on('end', function () {
 
-        // assert.fileContent([
-        //   ['app/index.html', /Sass is a mature/],
-        //   ['bower.json', /bootstrap-sass-official/]
-        // ]);
+        assert.fileContent([
+          ['app/index.html', /Sass is a mature/],
+          ['bower.json', /bootstrap-sass-official/]
+        ]);
 
         done();
       });

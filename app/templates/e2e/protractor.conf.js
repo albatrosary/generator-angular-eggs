@@ -23,6 +23,6 @@ exports.config = {
   // コンポーネント設定(todo helper)
   onPrepare : function(){
     browser.driver.manage().window().setSize(1280, 720);
-    global.po = require('./pageObject.config');
+    global.po = require('./pageObject.conf');
   },
 };
