@@ -188,7 +188,8 @@ describe('Angular Eggs generator', function () {
 
         assert.fileContent([
           ['app/index.html', /bootstrap/],
-          ['bower.json', /bootstrap/]
+          ['bower.json', /bootstrap/],
+          ['config/copy.js', /dest/]
         ]);
 
         done();
@@ -204,7 +205,10 @@ describe('Angular Eggs generator', function () {
           ['package.json', /grunt-sass/],
           ['config/watch.js', /sass/],
           ['config/concurrent.js', /sass:server/],
-          ['config/concurrent.js', /sass/]
+          ['config/concurrent.js', /sass/],
+          ['config/watch.js', /sass:serve/],
+          ['config/wiredep.js', /bootstrap-sass-official/],
+          ['config/wiredep.js', /ignorePath/]
         ]);
 
         assert.file([].concat(
@@ -214,7 +218,9 @@ describe('Angular Eggs generator', function () {
 
         assert.noFileContent([
           ['Gruntfile.js', /bootstrap-sass-official/],
-          ['config/concurrent.js', /copy:styles/]
+          ['config/concurrent.js', /copy:styles/],
+          ['config/copy.js', /styles: {/],
+          ['config/wiredep.js', /dist/]
         ]);
 
         done();
@@ -227,7 +233,8 @@ describe('Angular Eggs generator', function () {
       }).on('end', function () {
 
         assert.fileContent([
-          ['bower.json', /bootstrap-sass-official/]
+          ['bower.json', /bootstrap-sass-official/],
+          ['config/copy.js', /bootstrap-sass-official/]
         ]);
 
         assert.file([].concat(
