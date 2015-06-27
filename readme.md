@@ -112,5 +112,5 @@ Produces `test/components/mycomponent/mycomponent.spec.js`:
 
 ## License
 
-[BSD license](http://opensource.org/licenses/bsd-license.php)
+[MIT License](http://opensource.org/licenses/MIT)
 
