@@ -81,23 +81,23 @@ module.exports = yeoman.generators.Base.extend({
 
     if (this.includeBootstrap) {
       var bs = 'bootstrap' + (this.includeSass ? '-sass-official' : '');
-      bower.dependencies[bs] = '~3.2.0';
+      bower.dependencies[bs] = '~3.3.5';
     } else {
-      bower.dependencies.jquery = '~1.11.1';
+      bower.dependencies.jquery = '~2.1.4';
     }
 
     if (this.includeModernizr) {
-      bower.dependencies.modernizr = '~2.8.2';
+      bower.dependencies.modernizr = '~2.8.3';
     }
 
-    bower.dependencies.angular = '~1.4.0';
+    bower.dependencies.angular = '~1.4.1';
     bower.dependencies['angular-new-router'] = '~0.5.3';
-    bower.dependencies['angular-resource'] = '~1.4.0';
+    bower.dependencies['angular-resource'] = '~1.4.1';
 
     bower.overrides['angular-new-router'] = {};
     bower.overrides['angular-new-router'].main = 'dist/router.es5.js';
 
-    bower.devDependencies['angular-mocks'] = '~1.4.0';
+    bower.devDependencies['angular-mocks'] = '~1.4.1';
 
     this.copy('bowerrc', '.bowerrc');
     this.write('bower.json', JSON.stringify(bower, null, 2));
