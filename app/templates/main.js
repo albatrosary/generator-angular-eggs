@@ -5,9 +5,10 @@
   angular
     .module('<%= appname %>', [
       'ngNewRouter',
+      '<%= appname %>.config',
       '<%= appname %>.home',
       '<%= appname %>.about',
-      '<%= appname %>.contact',
+      '<%= appname %>.contact'
     ])
     .controller('AppController', AppController);
 
