@@ -97,6 +97,11 @@ module.exports = yeoman.generators.Base.extend({
     bower.overrides['angular-new-router'] = {};
     bower.overrides['angular-new-router'].main = 'dist/router.es5.js';
 
+    if (this.includeBootstrap && !this.includeSass) {
+      bower.overrides['bootstrap'] = {};
+      bower.overrides['bootstrap'].main = 'dist/css/bootstrap.css';
+    }
+
     bower.devDependencies['angular-mocks'] = '~1.4.1';
 
     this.copy('bowerrc', '.bowerrc');
