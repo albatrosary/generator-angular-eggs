@@ -72,7 +72,7 @@ module.exports = yeoman.generators.Base.extend({
 
   bower: function () {
     var bower = {
-      name: this._.slugify(this.appname),
+      name: this.appname,
       private: true,
       dependencies: {},
       overrides: {},

@@ -2,11 +2,11 @@
   "name": "generator-angular-eggs",
   "version": "0.1.0",
   "description": "Angular and Angular new Router with an Express server",
-  "license": "BSD",
+  "license": "MIT",
   "author": {
     "name": "Fumio SAGAWA",
     "email": "fumio.sagawa@gmail.com",
-    "url": "http://www.ashiras.xyz"
+    "url": "https://github.com/albatrosary"
   },
   "repository": {
     "type": "git",
@@ -42,17 +42,17 @@
     "express"
   ],
   "dependencies": {
-    "chalk": "^1.0.0",
     "cheerio": "^0.19.0",
     "coveralls": "~2.11.0",
     "istanbul": "~0.3.14",
     "jscoverage": "^0.5.9",
-    "mocha": "^2.2.5",
-    "mocha-lcov-reporter": "0.0.2",
     "yeoman-generator": "^0.18.9",
-    "yosay": "^1.0.4"
+    "chalk": "^1.0.0",
+    "yosay": "^1.0.2"
   },
   "devDependencies": {
+    "mocha": "^2.2.5",
+    "mocha-lcov-reporter": "0.0.2",
     "grunt-cli": "^0.1.13",
     "lodash": "^3.9.3" 
   },
