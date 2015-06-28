@@ -20,7 +20,6 @@
    */
   function <%= className %>Controller() {
   	console.log('<%= className %>Controller Constructor');
-    vm = this;
   }
 
   /**
@@ -31,6 +30,7 @@
   */
   <%= className %>Controller.prototype.activate = function() {
   	console.log('<%= className %>Controller activate Method');
+    vm = this;
   };
 
 
