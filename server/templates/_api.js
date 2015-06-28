@@ -2,7 +2,7 @@
 
 exports = module.exports = function(app) {
 
-  var <%= name %> = require('../data/<%= name %>.json')
+  var <%= name %> = require('../data/<%= name %>.json');
 
   app.get('/api/<%= name %>', function(req, res) {
     // something
