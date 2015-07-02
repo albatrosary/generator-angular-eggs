@@ -3,7 +3,7 @@
 
   angular
     .module('<%= appname %>.directive.<%= name %>',[])
-    .directive('<%= appname %><%= className %>', <%= name %>Directive);
+    .directive('<%= appname.toLowerCase() %><%= className %>', <%= className %>Directive);
 
   <%= name %>Directive.$inject = ['$timeout'];
 
