@@ -1,21 +1,19 @@
 /**
- * 
- *
- * @deprecated 
- * @module components/<%= name %>
+ * @module <%= appname %>.components.<%= name %>
  */
 (function () {
   'use strict';
 
   angular
-    .module('<%= appname %>.<%= name %>', [])
+    .module('<%= appname %>.components.<%= name %>', [])
     .controller('<%= className %>Controller', <%= className %>Controller);
 
   <%= className %>Controller.$inject = [];
+
   /**
-   * AboutController
+   * <%= className %>Controller
    *
-   * @class AboutController
+   * @class <%= className %>Controller
    * @constructor
    */
   function <%= className %>Controller() {
@@ -33,22 +31,12 @@
     vm = this;
   };
 
-
   /**
-   * Static property
-   */
-
-  /**
-   * Static method, assigned to class
-   */
-
-  /**
-   * Private property
+   * My property description.  Like other pieces of your comment blocks, 
+   * this can span multiple lines.
+   * 
+   * @property vm
+   * @type {Object}
    */
   var vm;
-
-  /**
-   * Private Method
-   */
-
 })();

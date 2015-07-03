@@ -5,10 +5,10 @@
   angular
     .module('<%= appname %>', [
       'ngNewRouter',
-      '<%= appname %>.config',
-      '<%= appname %>.home',
-      '<%= appname %>.about',
-      '<%= appname %>.contact'
+      '<%= appname %>.components.config',
+      '<%= appname %>.components.home',
+      '<%= appname %>.components.about',
+      '<%= appname %>.components.contact'
     ])
     .controller('AppController', AppController);
 

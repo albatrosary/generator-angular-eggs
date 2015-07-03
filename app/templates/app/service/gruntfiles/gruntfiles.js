@@ -1,3 +1,6 @@
+/**
+ * @module <%= appname %>.service.gruntfiles
+ */
 (function () {
   'use strict';
   
@@ -8,8 +11,8 @@
     .factory('GruntfilesService', GruntfilesService);
 
   GruntfilesService.$inject = ['$resource'];
+  
   /**
-   * 
    * @class GruntfilesService
    * @constructor
    */

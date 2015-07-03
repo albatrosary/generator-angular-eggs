@@ -1,14 +1,11 @@
 /**
- * 
- *
- * @deprecated 
- * @module components/home
+ * @module <%= appname %>.components.home
  */
 (function () {
   'use strict';
 
   angular
-    .module('<%= appname %>.home', [])
+    .module('<%= appname %>.components.home', [])
     .controller('HomeController', HomeController);
 
   HomeController.$inject = [];
@@ -28,12 +25,6 @@
   * this can span multiple lines.
   *
   * @method activate
-  * @param {String} foo Argument 1
-  * @param {Object} config A config object
-  * @param {String} config.name The name on the config object
-  * @param {Function} config.callback A callback function on the config object
-  * @param {Boolean} [extra=false] Do extra, optional work
-  * @return {Boolean} Returns true on success
   */
   HomeController.prototype.activate = function() {
     console.log('HomeController activate Method');

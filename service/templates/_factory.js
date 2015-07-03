@@ -8,19 +8,29 @@
   <%= className %>Service.$inject = [];
 
   /**
-   * 
+   * <%= className %>Service
+   *
    * @class <%= className %>Service
    * @constructor
    */
-  function <%= className %>Service(){
+  function <%= className %>Service () {
     
-    var someProperty={};
+    /**
+     * My property description.  Like other pieces of your comment blocks, 
+     * this can span multiple lines.
+     * 
+     * @property propertyName
+     * @type {Object}
+     * @default "foo"
+     */
+    var someProperty = {};
 
     var <%= name %>Service = {
       someMethod: function () {
         return;
       }
     };
+    
     return <%= name %>Service;
   }
 

@@ -1,14 +1,11 @@
 /**
- * 
- *
- * @deprecated 
- * @module components/about
+ * @module <%= appname %>.components.about
  */
 (function () {
   'use strict';
 
   angular
-    .module('<%= appname %>.about', [
+    .module('<%= appname %>.components.about', [
       '<%= appname %>.service.gruntfiles'
     ])
     .controller('AboutController', AboutController);
@@ -32,12 +29,6 @@
   * this can span multiple lines.
   *
   * @method activate
-  * @param {String} foo Argument 1
-  * @param {Object} config A config object
-  * @param {String} config.name The name on the config object
-  * @param {Function} config.callback A callback function on the config object
-  * @param {Boolean} [extra=false] Do extra, optional work
-  * @return {Boolean} Returns true on success
   */
   AboutController.prototype.activate = function() {
     console.log('AboutController Method activate');
@@ -50,25 +41,23 @@
   };
   
   /**
-   * Static property
-   */
-
-  /**
-   * Static method, assigned to class
-   */
-
-  /**
-   * Private property
+   * @property vm
+   * @private
    */
   var vm;
 
   /**
-   * Private Method
+   * @method setlist
+   * @private
    */
   var setlist = function (list) {
     vm.list = list;
   };
 
+  /**
+   * @method error
+   * @private
+   */
   var error = function () {
   };
 })();

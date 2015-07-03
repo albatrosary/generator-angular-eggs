@@ -5,14 +5,14 @@
     .module('<%= appname %>.directive.<%= name %>',[])
     .directive('<%= appname.toLowerCase() %><%= className %>', <%= className %>Directive);
 
-  <%= name %>Directive.$inject = ['$timeout'];
+  <%= name %>Directive.$inject = [];
 
   /**
    * 
    * @class <%= name %>Directive
    * @constructor
    */
-  function <%= name %>Directive($timeout){
+  function <%= name %>Directive(){
     function <%= name %>Link(scope, element){
 
     }
