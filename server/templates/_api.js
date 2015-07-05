@@ -1,3 +1,16 @@
+/**
+ * <%= className %> Server module.
+ *
+ * url:
+ * * get: /api/<%= name %>
+ * * get: /api/<%= name %>/:id
+ * * post: /api/<%= name %>
+ * * put: /api/<%= name %>
+ * * delete: /api/<%= name %>/:id
+ * * delete: /api/<%= name %>
+ * 
+ * @module server.api.<%= name %>
+ */
 'use strict';
 
 exports = module.exports = function(app) {
