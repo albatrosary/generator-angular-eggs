@@ -1,6 +1,31 @@
 (function(){
   'use strict';
 
+  angular
+    .module('<%= appname %>.mock.service.gruntfiles',[])
+    .factory('GruntfilesService', GruntfilesService);
+  
+  function GruntfilesService(){
+    return {
+      query: querySpy
+    };
+  }
+
+  var querySpy = jasmine.createSpy().and.returnValue({
+    $promise: {
+      then: function(cb){
+        
+        cb(json);
+
+        return {
+          catch:function(ccb){
+            ccb(false);
+          }
+        };
+      }
+    }
+  });
+
   var json = [
     {
       'name': 'connect-history-api-fallback',
@@ -18,32 +43,4 @@
       'desc': 'Parse CSS and add vendor-prefixed CSS properties using the Can I Use database. Based on Autoprefixer.'
     }
   ];
-
-  angular
-    .module('<%= appname %>.mock.service.gruntfiles',[])
-    .factory('GruntfilesService', GruntfilesService);
-  
-  GruntfilesService.$inject = [];
-
-  function GruntfilesService(){
-    
-    var querySpy = jasmine.createSpy().and.returnValue({
-      $promise: {
-        then: function(cb){
-          
-          cb(json);
-
-          return {
-            catch:function(ccb){
-              ccb(false);
-            }
-          };
-        }
-      }
-    });
-
-    return {
-      query: querySpy
-    };
-  }
 })();

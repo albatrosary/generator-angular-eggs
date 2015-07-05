@@ -5,11 +5,14 @@
     .module('<%= appname %>.mock.service.<%= name %>',[])
     .factory('<%= className %>Service', <%= className %>Service);
 
-  var result = {};
-
   function <%= className %>Service(){
-    
-    var someSpy = jasmine.createSpy().and.returnValue({
+    return {
+      some: someSpy
+    };
+  }
+  
+  var someSpy = jasmine.createSpy().and.returnValue({
+    $resource: {
       then: function(cb){
         cb(result);
         return {
@@ -19,10 +22,9 @@
           }
         };
       }
-    });
+    }
+  });
 
-    return {
-      some: someSpy
-    };
-  }
+  var result = {};
+
 })();
