@@ -44,8 +44,11 @@
     },
     dist: {
       options: {
-        server: '<%%= paths.dist %>',
-        background: false,
+        server: {
+          baseDir: ['<%%= paths.dist %>'],
+          middleware: [ historyApiFallback(), proxy ]
+        },
+        background: false
       }
     },
     e2e: {

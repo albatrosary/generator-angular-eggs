@@ -134,6 +134,7 @@ module.exports = yeoman.generators.Base.extend({
     this.mkdir('app/scripts');
     this.mkdir('app/styles');
     this.mkdir('app/images');
+    this.mkdir('app/directives');
 
     this.write('app/index.html', this.indexFile);
 

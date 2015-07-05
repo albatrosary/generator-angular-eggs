@@ -1,3 +1,11 @@
+/**
+ * Gruntfiles Server module.
+ *
+ * url:
+ * * get: /api/gruntfiles
+ * 
+ * @module server.api.gruntfiles
+ */
 'use strict';
 
 exports = module.exports = function(app) {
