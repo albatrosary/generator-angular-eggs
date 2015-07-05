@@ -14,6 +14,6 @@ module.exports = yeoman.generators.Base.extend({
   },
   js: function () {
     this.copy('_api.js', 'server/api/'+this.name+'.js');
-    this.copy('_data.js', 'server/data/'+this.name+'.json');
+    this.copy('_data.json', 'server/data/'+this.name+'.json');
   }
 });

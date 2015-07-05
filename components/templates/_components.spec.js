@@ -13,7 +13,7 @@
 
     describe('<%= className %>Controller',function(){
       it('Test Case', function () {
-        <%= className %>.activate();
+        <%= className %>Controller.activate();
       });
     });
   });
