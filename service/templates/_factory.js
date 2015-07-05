@@ -1,8 +1,13 @@
+/**
+ * <%= className %> Service module.
+ *
+ * @module <%= appname %>.service.<%= name %>
+ */
 (function () {
   'use strict';
   
   angular
-    .module('<%= appname %>.service.<%= name %>',[])
+    .module('<%= appname %>.service.<%= name %>', [])
     .factory('<%= className %>Service', <%= className %>Service);
 
   <%= className %>Service.$inject = [];

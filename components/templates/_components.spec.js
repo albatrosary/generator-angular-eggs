@@ -3,7 +3,7 @@
 
   describe('Controller: <%= className %>Controller', function () {
 
-    beforeEach(module('<%= appname %>.<%= name %>'));
+    beforeEach(module('<%= appname %>.components.<%= name %>'));
 
     var <%= className %>Controller;
 
@@ -13,7 +13,7 @@
 
     describe('<%= className %>Controller',function(){
       it('Test Case', function () {
-
+        <%= className %>.activate();
       });
     });
   });

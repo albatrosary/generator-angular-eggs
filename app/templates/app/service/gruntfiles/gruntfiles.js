@@ -1,4 +1,6 @@
 /**
+ * Gruntfiles Service module.
+ *
  * @module <%= appname %>.service.gruntfiles
  */
 (function () {

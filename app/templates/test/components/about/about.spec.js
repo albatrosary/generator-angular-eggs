@@ -3,7 +3,7 @@
 
   describe('Controller: AboutController', function () {
 
-    beforeEach(module('<%= appname %>.about'));
+    beforeEach(module('<%= appname %>.components.about'));
     beforeEach(module('<%= appname %>.mock.service.gruntfiles'));
 
     var AboutController;

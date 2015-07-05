@@ -1,4 +1,6 @@
 /**
+ * Contact Components module.
+ *
  * @module <%= appname %>.components.contact
  */
 (function () {
@@ -21,11 +23,11 @@
   }
 
   /**
-  * My method description.  Like other pieces of your comment blocks, 
-  * this can span multiple lines.
-  *
-  * @method activate
-  */
+   * The controller activate makes it convenient to re-use the logic 
+   * for a refresh for the controller/View, keeps the logic together.
+   *
+   * @method activate
+   */
   ContactController.prototype.activate = function() {
   	console.log('ContactController activate Method');
     vm = this;

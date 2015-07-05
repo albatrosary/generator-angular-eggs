@@ -3,7 +3,7 @@
 
   describe('Controller: ContactController', function () {
 
-    beforeEach(module('<%= appname %>.contact'));
+    beforeEach(module('<%= appname %>.components.contact'));
 
     var ContactController;
 
@@ -13,7 +13,7 @@
 
     describe('ContactController',function(){
       it('Test Case', function () {
-
+        ContactController.activate();
       });
     });
   });

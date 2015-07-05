@@ -1,11 +1,15 @@
-// jshint devel:true
+/**
+ * This is <%= appname %> module.
+ *
+ * @module <%= appname %>
+ */
 (function () {
   'use strict';
 
   angular
     .module('<%= appname %>', [
       'ngNewRouter',
-      '<%= appname %>.components.config',
+      '<%= appname %>.config',
       '<%= appname %>.components.home',
       '<%= appname %>.components.about',
       '<%= appname %>.components.contact'
@@ -19,5 +23,14 @@
     { path: '/contact', component: 'contact' }
   ];
 
+  AppController.$inject = [];  
+
+  /**
+   * AppController
+   *
+   * @class AppController
+   * @main <%= appname %>
+   * @constructor
+   */
   function AppController () {}
 })();

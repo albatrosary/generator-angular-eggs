@@ -1,4 +1,6 @@
 /**
+ * About Components module.
+ *
  * @module <%= appname %>.components.about
  */
 (function () {
@@ -25,11 +27,11 @@
   }
 
   /**
-  * My method description.  Like other pieces of your comment blocks, 
-  * this can span multiple lines.
-  *
-  * @method activate
-  */
+   * The controller activate makes it convenient to re-use the logic 
+   * for a refresh for the controller/View, keeps the logic together.
+   *
+   * @method activate
+   */
   AboutController.prototype.activate = function() {
     console.log('AboutController Method activate');
 
@@ -41,13 +43,18 @@
   };
   
   /**
+   * Angular ViewModel
+   *
    * @property vm
    * @private
    */
   var vm;
 
   /**
+   * Setting the retrieved Gruntfile list to ViewModel
+   *
    * @method setlist
+   * @param list {Object} Gruntfile list
    * @private
    */
   var setlist = function (list) {
@@ -55,9 +62,13 @@
   };
 
   /**
+   * It will capture the error at the time of Gruntfile data acquisition
+   * 
    * @method error
+   * @param e {Object} error message
    * @private
    */
-  var error = function () {
+  var error = function (e) {
+    vm.error = e;
   };
 })();

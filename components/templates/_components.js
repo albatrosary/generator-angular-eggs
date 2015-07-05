@@ -1,4 +1,6 @@
 /**
+ * <%= className %> Components module.
+ *
  * @module <%= appname %>.components.<%= name %>
  */
 (function () {
@@ -21,19 +23,18 @@
   }
 
   /**
-  * My method description.  Like other pieces of your comment blocks, 
-  * this can span multiple lines.
-  *
-  * @method activate
-  */
+   * The controller activate makes it convenient to re-use the logic 
+   * for a refresh for the controller/View, keeps the logic together.
+   *
+   * @method activate
+   */
   <%= className %>Controller.prototype.activate = function() {
   	console.log('<%= className %>Controller activate Method');
     vm = this;
   };
 
   /**
-   * My property description.  Like other pieces of your comment blocks, 
-   * this can span multiple lines.
+   * Angular ViewModel
    * 
    * @property vm
    * @type {Object}

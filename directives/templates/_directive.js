@@ -1,3 +1,8 @@
+/**
+ * <%= className %> Directive module.
+ *
+ * @module <%= appname %>.directive.<%= name %>
+ */
 (function () {
   'use strict';
 
@@ -5,14 +10,15 @@
     .module('<%= appname %>.directive.<%= name %>',[])
     .directive('<%= appname.toLowerCase() %><%= className %>', <%= className %>Directive);
 
-  <%= name %>Directive.$inject = [];
+  <%= className %>Directive.$inject = [];
 
-  /**
-   * 
-   * @class <%= name %>Directive
+  /** 
+   * <%= className %>Directive
+   *
+   * @class <%= className %>Directive
    * @constructor
    */
-  function <%= name %>Directive(){
+  function <%= className %>Directive(){
     function <%= name %>Link(scope, element){
 
     }

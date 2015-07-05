@@ -1,4 +1,6 @@
 /**
+ * Home Components module.
+ *
  * @module <%= appname %>.components.home
  */
 (function () {
@@ -21,11 +23,11 @@
   }
 
   /**
-  * My method description.  Like other pieces of your comment blocks, 
-  * this can span multiple lines.
-  *
-  * @method activate
-  */
+   * The controller activate makes it convenient to re-use the logic 
+   * for a refresh for the controller/View, keeps the logic together.
+   *
+   * @method activate
+   */
   HomeController.prototype.activate = function() {
     console.log('HomeController activate Method');
   };
