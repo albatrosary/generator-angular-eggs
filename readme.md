@@ -32,69 +32,456 @@ Available generators:
 
 - yo angular-eggs:components [name]
 - yo angular-eggs:service [name]
+- yo angular-eggs:resource [name]
 - yo angular-eggs:directives [name]
 - yo angular-eggs:server [name]
  
 
 ### Components
 
-Generates an Angular Components.
+Generates an Angular Components, as the Angular Module name is Sample.
 
 Example:
 
 ```
-yo angular:components mycomponent
+yo angular-eggs:components mycomponents
 ```
 
 Produces `app/components/mycomponent/mycomponent.js`:
 ```javascript
+/**
+ * Mycomponents Components module.
+ *
+ * @module Sample.components.mycomponents
+ */
 (function () {
   'use strict';
-  
+
   angular
-    .module('app-name.mycomponent', [])
-    .service('MycomponentController', MycomponentController);
-  
-  MycomponentController.$inject = [];
-  
-  function MycomponentController() {
-    ...
+    .module('Sample.components.mycomponents', [])
+    .controller('MycomponentsController', MycomponentsController);
+
+  MycomponentsController.$inject = [];
+
+  /**
+   * MycomponentsController
+   *
+   * @class MycomponentsController
+   * @constructor
+   */
+  function MycomponentsController() {
+    console.log('MycomponentsController Constructor');
   }
-  
-  MycomponentController.prototype.activate = function() {
-    ...
+
+  /**
+   * The controller activate makes it convenient to re-use the logic 
+   * for a refresh for the controller/View, keeps the logic together.
+   *
+   * @method activate
+   */
+  MycomponentsController.prototype.activate = function() {
+    console.log('MycomponentsController activate Method');
+    vm = this;
   };
-  
+
+  /**
+   * Angular ViewModel
+   * 
+   * @property vm
+   * @type {Object}
+   */
+  var vm;
 })();
 ```
 
-Produces `app/components/mycomponent/mycomponent.html`:
+Produces `app/components/mycomponents/mycomponents.html`:
 ```html
-<div>mycomponent.html</div>
+<div>mycomponents.html</div>
 ```
 
-Produces `test/components/mycomponent/mycomponent.spec.js`:
+Produces `test/components/mycomponents/mycomponents.spec.js`:
 ```javascript
 (function(){
   'use strict';
 
-  describe('Controller: MycomponentController', function () {
+  describe('Controller: MycomponentsController', function () {
 
-    beforeEach(module('app-name'));
+    beforeEach(module('Sample.components.mycomponents'));
 
-    var MycomponentController;
+    var MycomponentsController;
 
     beforeEach(inject(function ($controller) {
-      MycomponentController = $controller('MycomponentController');
+      MycomponentsController = $controller('MycomponentsController');
     }));
 
-    describe('MycomponentController',function(){
+    describe('MycomponentsController',function(){
       it('Test Case', function () {
+        Mycomponents.activate();
+      });
+    });
+  });
+})();
+```
+
+### Service
+
+Generates an Angular Service, as the Angular Module name is Sample.
+
+Example:
+
+```
+yo angular-eggs:service myservice
+```
+
+Produces `app/service/myservice/myservice.js`:
+```javascript
+/**
+ * Myservice Service module.
+ *
+ * @module Sample.service.myservice
+ */
+(function () {
+  'use strict';
+  
+  angular
+    .module('Sample.service.myservice', [])
+    .factory('MyserviceService', MyserviceService);
+
+  MyserviceService.$inject = [];
+
+  /**
+   * MyserviceService
+   *
+   * @class MyserviceService
+   * @constructor
+   */
+  function MyserviceService () {
+    
+    /**
+     * My property description.  Like other pieces of your comment blocks, 
+     * this can span multiple lines.
+     * 
+     * @property propertyName
+     * @type {Object}
+     * @default "foo"
+     */
+    var someProperty = {};
+
+    var myserviceService = {
+      someMethod: function () {
+        return;
+      }
+    };
+    
+    return myserviceService;
+  }
+
+})();
+```
+
+Produces `test/service/myservice/myservice.mock.js`:
+```javascript
+(function(){
+  'use strict';
+
+  angular
+    .module('Sample.mock.service.myservice',[])
+    .factory('MyserviceService', MyserviceService);
+
+  var result = {};
+
+  function MyserviceService(){
+    
+    var someSpy = jasmine.createSpy().and.returnValue({
+      then: function(cb){
+        cb(result);
+        return {
+          catch: function (ccb) {
+            /* Default Case Not Exeption; */
+            ccb();
+          }
+        };
+      }
+    });
+
+    return {
+      some: someSpy
+    };
+  }
+})();
+```
+
+Produces `test/service/myservice/myservice.spec.js`:
+```javascript
+(function () {
+  'use strict';
+
+  describe('Service: MyserviceService', function () {
+
+    var MyserviceService, $rootScope;
+
+    beforeEach(module('Sample.service.myservice'));
+
+    beforeEach(inject(function (_$rootScope_, _MyserviceService_) {
+      MyserviceService = _MyserviceService_;
+      $rootScope = _$rootScope_;
+    }));
+
+    describe('someThing',function(){
+      it('someThing',function(){
 
       });
     });
   });
 })();
+```
+
+### CRUD($resource) Service
+
+Generates an Angular CRUD Service, as the Angular Module name is Sample.
+
+Example:
+
+```
+yo angular-eggs:resource myresource
+```
+
+Produces `app/service/myresource/myresource.js`:
+```javascript
+/**
+ * Myresource Service module.
+ *
+ * @module Sample.service.myresource
+ */
+(function () {
+  'use strict';
+  
+  angular
+    .module('Sample.service.myresource', [
+      'ngResource'
+    ])
+    .factory('MyresourceService', MyresourceService);
+
+  MyresourceService.$inject = ['$resource'];
+
+  /**
+   * MyresourceService
+   *
+   * @class MyresourceService
+   * @constructor
+   */
+  function MyresourceService ($resource) {
+    return $resource('/api/myresource', {});
+  }
+})();
+```
+
+Produces `test/service/myresource/myresource.mock.js`:
+```javascript
+(function(){
+  'use strict';
+
+  angular
+    .module('Sample.mock.service.myresource',[])
+    .factory('MyresourceService', MyresourceService);
+
+  var result = {};
+
+  function MyresourceService(){
+    
+    var someSpy = jasmine.createSpy().and.returnValue({
+      then: function(cb){
+        cb(result);
+        return {
+          catch: function (ccb) {
+            /* Default Case Not Exeption; */
+            ccb();
+          }
+        };
+      }
+    });
+
+    return {
+      some: someSpy
+    };
+  }
+})();
+```
+
+Produces `test/service/myresource/myresource.spec.js`:
+```javascript
+(function () {
+  'use strict';
+
+  describe('Service: MyresourceService', function () {
+
+    var MyresourceService, $rootScope;
+
+    beforeEach(module('Sample.service.myresource'));
+
+    beforeEach(inject(function (_$rootScope_, _MyresourceService_) {
+      MyresourceService = _MyresourceService_;
+      $rootScope = _$rootScope_;
+    }));
+
+    describe('someThing',function(){
+      it('someThing',function(){
+
+      });
+    });
+  });
+})();
+```
+
+### Directives
+
+Generates an Angular Directive, as the Angular Module name is Sample.
+
+Example:
+
+```
+yo angular-eggs:directives mydirectives
+```
+
+Produces `app/directives/mydirectives/mydirectives.js`:
+```javascript
+/**
+ * Mydirectives Directive module.
+ *
+ * @module Sample.directive.mydirectives
+ */
+(function () {
+  'use strict';
+
+  angular
+    .module('Sample.directive.mydirectives',[])
+    .directive('sampleMydirectives', MydirectivesDirective);
+
+  MydirectivesDirective.$inject = [];
+
+  /** 
+   * MydirectivesDirective
+   *
+   * @class MydirectivesDirective
+   * @constructor
+   */
+  function MydirectivesDirective(){
+    function mydirectivesLink(scope, element){
+
+    }
+
+    return {
+      restrict: 'E',
+      replace: true,
+      templateUrl: 'directives/mydirectives/mydirectives.html',
+      scope: {
+        title: '=',
+        message: '='
+      },
+      link: mydirectivesLink
+    };
+  }
+
+})();
+```
+
+Produces `app/directives/mydirectives/mydirectives.html`:
+```html
+<div>mydirectives.html</div>
+```
+
+Produces `test/directives/mydirectives/mydirectives.spec.js`:
+```javascript
+'use strict';
+
+describe('Directive: mydirectivesDirective', function () {
+
+  beforeEach(module('Sample.directive.mydirectives'));
+
+  var element, scope, $rootScope, $compile;
+  var compareHTML   = '';
+  var resultHTML    = '<div>' + compareHTML + '</div>';
+  var directiveHTML = '';
+
+  beforeEach(inject(function (_$rootScope_, _$compile_, $templateCache) {
+    $rootScope = _$rootScope_;
+    scope = _$rootScope_.$new();
+    $compile = _$compile_;
+    $templateCache.put('directives/mydirectives/mydirectives.html', resultHTML);
+  }));
+
+  describe('someThing', function () {
+
+    beforeEach(function Compile() {
+
+    });
+
+    it ('someThing', function () {
+    
+    });
+  });
+});
+```
+
+### Server
+
+Generates an Express Server.
+
+Example:
+
+```
+yo angular-eggs:server myserver
+```
+
+Produces `server/api/myserver.js`:
+```javascript
+'use strict';
+
+exports = module.exports = function(app) {
+
+  var myserver = require('../data/myserver.json');
+
+  app.get('/api/myserver', function(req, res) {
+    // something
+    res.status(200).json(myserver);
+  });
+
+  app.get('/api/myserver/:id', function(req, res) {
+    var id = req.params.id;
+    // something
+
+    res.status(200).json(myserver);
+  });
+
+  app.post('/api/myserver', function(req, res) {
+    // something
+    res.sendStatus(200);
+  });
+
+  app.put('/api/myserver', function(req, res) {
+    // something
+    res.sendStatus(200);
+  });
+
+  app.delete('/api/myserver/:id', function(req, res) {
+    var id = req.params.id;
+    // something
+
+    res.sendStatus(200);
+  });
+
+  app.delete('/api/myserver', function(req, res) {
+    // something
+    res.sendStatus(200);
+  });
+};
+```
+
+Produces `server/data/myserver.json`:
+```json
+[
+  {}
+]
 ```
 
 ## Tasks
