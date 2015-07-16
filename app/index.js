@@ -71,6 +71,7 @@ module.exports = yeoman.generators.Base.extend({
   },
 
   bower: function () {
+    var angularVersion = '~1.4.3';
     var bower = {
       name: this.appname,
       private: true,
@@ -90,9 +91,9 @@ module.exports = yeoman.generators.Base.extend({
       bower.dependencies.modernizr = '~2.8.3';
     }
 
-    bower.dependencies.angular = '~1.4.2';
+    bower.dependencies.angular = angularVersion;
     bower.dependencies['angular-new-router'] = '~0.5.3';
-    bower.dependencies['angular-resource'] = '~1.4.2';
+    bower.dependencies['angular-resource'] = angularVersion;
 
     bower.overrides['angular-new-router'] = {};
     bower.overrides['angular-new-router'].main = 'dist/router.es5.js';
@@ -102,7 +103,7 @@ module.exports = yeoman.generators.Base.extend({
       bower.overrides['bootstrap'].main = 'dist/css/bootstrap.css';
     }
 
-    bower.devDependencies['angular-mocks'] = '~1.4.2';
+    bower.devDependencies['angular-mocks'] = angularVersion;
 
     this.copy('bowerrc', '.bowerrc');
     this.write('bower.json', JSON.stringify(bower, null, 2));
