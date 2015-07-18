@@ -19,23 +19,23 @@
    * @constructor
    */
   function <%= className %>Controller() {
-  	console.log('<%= className %>Controller Constructor');
+    console.log('<%= className %>Controller Constructor');
   }
 
   /**
-   * The controller activate makes it convenient to re-use the logic 
+   * The controller activate makes it convenient to re-use the logic
    * for a refresh for the controller/View, keeps the logic together.
    *
    * @method activate
    */
   <%= className %>Controller.prototype.activate = function() {
-  	console.log('<%= className %>Controller activate Method');
+    console.log('<%= className %>Controller activate Method');
     vm = this;
   };
 
   /**
    * Angular ViewModel
-   * 
+   *
    * @property vm
    * @type {Object}
    */

@@ -6,7 +6,7 @@
     .module('<%= appname %>.config', [])
     .config(AppConfig);
 
-  function AppConfig($locationProvider){
+  function AppConfig($locationProvider) {
     /*
       # Hashbang Mode
       http://www.example.com/#/aaa/

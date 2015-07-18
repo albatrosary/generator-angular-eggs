@@ -1,182 +1,182 @@
 [
   {
-  	"name": "connect-history-api-fallback",
-  	"version": "^1.1.0",
+    "name": "connect-history-api-fallback",
+    "version": "^1.1.0",
     "desc": "Provides a fallback for non-existing directories so that the HTML 5 history API can be used."
   },
   {
-  	"name": "grunt",
-  	"version": "^0.4.5",
+    "name": "grunt",
+    "version": "^0.4.5",
     "desc": "The JavaScript Task Runner"
   },
   {
-  	"name": "grunt-autoprefixer",
-  	"version": "^3.0.1",
+    "name": "grunt-autoprefixer",
+    "version": "^3.0.1",
     "desc": "Parse CSS and add vendor-prefixed CSS properties using the Can I Use database. Based on Autoprefixer."
   },
   {
-  	"name": "grunt-browser-sync",
-  	"version": "^2.1.3",
+    "name": "grunt-browser-sync",
+    "version": "^2.1.3",
     "desc": "Live CSS reload & Browser Syncing"
   },
   {
-  	"name": "grunt-concurrent",
-  	"version": "^1.0.0",
+    "name": "grunt-concurrent",
+    "version": "^1.0.0",
     "desc": "Run grunt tasks concurrently"
   },
   {
-  	"name": "grunt-contrib-clean",
-  	"version": "^0.6.0",
+    "name": "grunt-contrib-clean",
+    "version": "^0.6.0",
     "desc": "Clean files and folders."
   },
   {
-  	"name": "grunt-contrib-concat",
-  	"version": "^0.5.1",
+    "name": "grunt-contrib-concat",
+    "version": "^0.5.1",
     "desc": "Concatenate files."
   },
   {
-  	"name": "grunt-contrib-copy",
-  	"version": "^0.8.0",
+    "name": "grunt-contrib-copy",
+    "version": "^0.8.0",
     "desc": "Copy files and folders"
   },
   {
-  	"name": "grunt-contrib-cssmin",
-  	"version": "^0.12.3",
+    "name": "grunt-contrib-cssmin",
+    "version": "^0.12.3",
     "desc": "Minify CSS"
   },
   {
-  	"name": "grunt-contrib-htmlmin",
-  	"version": "^0.4.0",
+    "name": "grunt-contrib-htmlmin",
+    "version": "^0.4.0",
     "desc": "Minify HTML"
   },
   {
-  	"name": "grunt-contrib-imagemin",
-  	"version": "^0.9.4",
+    "name": "grunt-contrib-imagemin",
+    "version": "^0.9.4",
     "desc": "Minify images"
   },
   {
-  	"name": "grunt-contrib-jshint",
-  	"version": "^0.11.2",
+    "name": "grunt-contrib-jshint",
+    "version": "^0.11.2",
     "desc": "Validate files with JSHint."
   },
   {
-  	"name": "grunt-contrib-uglify",
-  	"version": "^0.9.1",
+    "name": "grunt-contrib-uglify",
+    "version": "^0.9.1",
     "desc": "Minify files with UglifyJS."
   },
   {
-  	"name": "grunt-contrib-watch",
-  	"version": "^0.6.1",
+    "name": "grunt-contrib-watch",
+    "version": "^0.6.1",
     "desc": "Run predefined tasks whenever watched file patterns are added, changed or deleted."
   },
   {
-  	"name": "grunt-contrib-yuidoc",
-  	"version": "^0.8.0",
+    "name": "grunt-contrib-yuidoc",
+    "version": "^0.8.0",
     "desc": "Compile YUIDoc Documentation."
   },
   {
-  	"name": "grunt-express-server",
-  	"version": "^0.5.1",
+    "name": "grunt-express-server",
+    "version": "^0.5.1",
     "desc": "Grunt task for running an Express Server that works great with LiveReload + Watch/Regarde"
   },
   {
-  	"name": "grunt-filerev",
-  	"version": "^2.3.1",
+    "name": "grunt-filerev",
+    "version": "^2.3.1",
     "desc": "Asset revisioning by using file content hashing"
   },
   {
-  	"name": "grunt-injector",
-  	"version": "^0.6.0",
+    "name": "grunt-injector",
+    "version": "^0.6.0",
     "desc": "Inject references to files into other files (think scripts and stylesheets into an html file)"
   },
   {
-  	"name": "grunt-karma",
-  	"version": "^0.11.0",
+    "name": "grunt-karma",
+    "version": "^0.11.0",
     "desc": "grunt plugin for karma test runner"
   },
   {
-  	"name": "grunt-newer",
-  	"version": "^1.1.0",
+    "name": "grunt-newer",
+    "version": "^1.1.0",
     "desc": "Run Grunt tasks with only those source files modified since the last successful run."
   },
   {
-  	"name": "grunt-plato",
-  	"version": "^1.2.1",
+    "name": "grunt-plato",
+    "version": "^1.2.1",
     "desc": "Generate complexity analysis reports with plato"
   },
   {
-  	"name": "grunt-protractor-runner",
-  	"version": "^2.0.0",
+    "name": "grunt-protractor-runner",
+    "version": "^2.0.0",
     "desc": "A Grunt plugin for running protractor runner."
   },
   {
-  	"name": "grunt-protractor-webdriver",
-  	"version": "^0.2.0",
+    "name": "grunt-protractor-webdriver",
+    "version": "^0.2.0",
     "desc": "grunt plugin for starting Protractor's bundled Selenium Webdriver"
   },
   {
-  	"name": "grunt-run",
-  	"version": "^0.3.0",
+    "name": "grunt-run",
+    "version": "^0.3.0",
     "desc": "Invite external commands into your grunt process with three tasks `run`, `wait` and `stop`."
   },
   {
-  	"name": "grunt-svgmin",
-  	"version": "^2.0.1",
+    "name": "grunt-svgmin",
+    "version": "^2.0.1",
     "desc": "Minify SVG"
   },
   {
-  	"name": "grunt-usemin",
-  	"version": "^3.0.0",
+    "name": "grunt-usemin",
+    "version": "^3.0.0",
     "desc": "Replaces references to non-optimized scripts or stylesheets into a set of HTML files (or any templates/views)."
   },
   {
-  	"name": "grunt-wiredep",
-  	"version": "^2.0.0",
+    "name": "grunt-wiredep",
+    "version": "^2.0.0",
     "desc": ""
   },
   {
-  	"name": "http-proxy-middleware",
-  	"version": "0.0.5",
+    "name": "http-proxy-middleware",
+    "version": "0.0.5",
     "desc": "http-proxy middleware for connect"
   },
   {
-  	"name": "jasmine-core",
-  	"version": "^2.3.4",
+    "name": "jasmine-core",
+    "version": "^2.3.4",
     "desc": "Official packaging of Jasmine's core files for use by Node.js projects."
   },
   {
-  	"name": "jshint-stylish",
-  	"version": "^2.0.0",
+    "name": "jshint-stylish",
+    "version": "^2.0.0",
     "desc": "Stylish reporter for JSHint"
   },
   {
-  	"name": "karma",
-  	"version": "^0.12.36",
+    "name": "karma",
+    "version": "^0.12.36",
     "desc": "Spectacular Test Runner for JavaScript."
   },
   {
-  	"name": "karma-coverage",
-  	"version": "^0.3.1",
+    "name": "karma-coverage",
+    "version": "^0.3.1",
     "desc": "A Karma plugin. Generate code coverage."
   },
   {
-  	"name": "karma-jasmine",
-  	"version": "^0.3.5",
+    "name": "karma-jasmine",
+    "version": "^0.3.5",
     "desc": "A Karma plugin - adapter for Jasmine testing framework."
   },
   {
-  	"name": "karma-phantomjs-launcher",
-  	"version": "^0.2.0",
+    "name": "karma-phantomjs-launcher",
+    "version": "^0.2.0",
     "desc": "A Karma plugin. Launcher for PhantomJS."
   },
   {
-  	"name": "load-grunt-configs",
-  	"version": "^0.4.3",
+    "name": "load-grunt-configs",
+    "version": "^0.4.3",
     "desc": "Loads grunt task configurations from separate files"
   },
   {
-  	"name": "load-grunt-tasks",
-  	"version": "^3.2.0",
+    "name": "load-grunt-tasks",
+    "version": "^3.2.0",
     "desc": "Load multiple grunt tasks using globbing patterns"
   },
   {
@@ -185,28 +185,28 @@
     "desc": "Headless WebKit with JS API"
   },
   {
-  	"name": "protractor",
-  	"version": "^2.1.0",
+    "name": "protractor",
+    "version": "^2.1.0",
     "desc": "Webdriver E2E test wrapper for Angular."
   },
   {
-  	"name": "q",
-  	"version": "^1.4.1",
+    "name": "q",
+    "version": "^1.4.1",
     "desc": "A library for promises (CommonJS/Promises/A,B,D)"
   },
   {
-  	"name": "time-grunt",
-  	"version": "^1.2.0",
+    "name": "time-grunt",
+    "version": "^1.2.0",
     "desc": "Display the elapsed execution time of grunt tasks"
   },
   {
-  	"name": "body-parser",
-  	"version": "^1.12.3",
+    "name": "body-parser",
+    "version": "^1.12.3",
     "desc": "Node.js body parsing middleware"
   },
   {
-  	"name": "express",
-  	"version": "^4.12.3",
+    "name": "express",
+    "version": "^4.12.3",
     "desc": "Fast, unopinionated, minimalist web framework"
   }
 ]

@@ -1,4 +1,4 @@
-(function(){
+(function() {
   'use strict';
 
   describe('Controller: AppController', function () {
@@ -11,7 +11,7 @@
       AppController = $controller('AppController');
     }));
 
-    describe('AppController',function(){
+    describe('AppController', function() {
       it('Test Case', function () {
 
       });

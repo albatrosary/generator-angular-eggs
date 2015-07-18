@@ -1,7 +1,7 @@
 (function () {
   'use strict';
 
-  describe('Service: <%= className %>Service', function () {
+  describe('Service: <%= className %>Service', function() {
 
     var <%= className %>Service, $rootScope;
 
@@ -12,8 +12,8 @@
       $rootScope = _$rootScope_;
     }));
 
-    describe('someThing',function(){
-      it('someThing',function(){
+    describe('someThing', function() {
+      it('someThing', function() {
 
       });
     });

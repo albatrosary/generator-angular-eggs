@@ -1,6 +1,6 @@
-(function(){
+(function() {
   'use strict';
-  
+
   module.exports = {
     dist: {
       devFile: 'bower_components/modernizr/modernizr.js',

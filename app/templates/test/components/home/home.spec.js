@@ -1,4 +1,4 @@
-(function(){
+(function() {
   'use strict';
 
   describe('Controller: HomeController', function () {
@@ -11,7 +11,7 @@
       HomeController = $controller('HomeController');
     }));
 
-    describe('HomeController',function(){
+    describe('HomeController', function() {
       it('Test Case', function () {
         HomeController.activate();
       });

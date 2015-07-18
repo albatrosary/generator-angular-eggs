@@ -197,7 +197,6 @@ describe('Angular Eggs generator', function () {
           ['package.json', /modernizr/],
         ]);
 
-
         done();
       });
     });
@@ -309,7 +308,6 @@ describe('Angular Eggs generator', function () {
           ['bower.json', /modernizr/],
           ['package.json', /modernizr/],
         ]);
-
 
         done();
       });

@@ -46,6 +46,7 @@ module.exports = function (grunt) {
       'injector',
       'wiredep',
       'jshint',
+      'jscs',
       'concurrent:server',
       'autoprefixer',
       'express:dev',
@@ -71,6 +72,7 @@ module.exports = function (grunt) {
         'wiredep:test',
         'injector:test',
         'jshint',
+        'jscs',
         'karma:single',
         'browserSync:coverage'
       ]);
@@ -79,6 +81,7 @@ module.exports = function (grunt) {
         'wiredep:test',
         'injector:test',
         'jshint',
+        'jscs',
         'karma:single'
       ]);
     }

@@ -7,19 +7,19 @@
   'use strict';
 
   angular
-    .module('<%= appname %>.directive.<%= name %>',[])
+    .module('<%= appname %>.directive.<%= name %>', [])
     .directive('<%= appname.toLowerCase() %><%= className %>', <%= className %>Directive);
 
   <%= className %>Directive.$inject = [];
 
-  /** 
+  /**
    * <%= className %>Directive
    *
    * @class <%= className %>Directive
    * @constructor
    */
-  function <%= className %>Directive(){
-    function <%= name %>Link(scope, element){
+  function <%= className %>Directive() {
+    function <%= name %>Link(scope, element) {
 
     }
 

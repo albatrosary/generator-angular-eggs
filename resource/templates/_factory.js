@@ -3,9 +3,9 @@
  *
  * @module <%= appname %>.service.<%= name %>
  */
-(function () {
+(function() {
   'use strict';
-  
+
   angular
     .module('<%= appname %>.service.<%= name %>', [
       'ngResource'
@@ -24,5 +24,3 @@
     return $resource('/api/<%= name %>', {});
   }
 })();
-
-

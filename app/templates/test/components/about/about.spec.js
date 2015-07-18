@@ -1,4 +1,4 @@
-(function(){
+(function() {
   'use strict';
 
   describe('Controller: AboutController', function () {
@@ -12,8 +12,8 @@
       AboutController = $controller('AboutController');
     }));
 
-    describe('AboutController',function(){
-      it('Set Grunt List', function () {
+    describe('AboutController', function() {
+      it('Set Grunt List', function() {
         AboutController.activate();
         expect(AboutController.list[0].name).toEqual('connect-history-api-fallback');
       });
@@ -23,9 +23,9 @@
       it('spec', function() {
         // setup
         var obj = {
-            method: function() {
-                console.log('obj#method()');
-            }
+          method: function() {
+            console.log('obj#method()');
+          }
         };
 
         spyOn(obj, 'method');

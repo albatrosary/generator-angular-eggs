@@ -1,6 +1,6 @@
-(function(){
+(function() {
   'use strict';
-  
+
   module.exports = {
     compile: {
       name: '<%%= pkg.name %>',

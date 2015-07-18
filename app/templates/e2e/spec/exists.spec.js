@@ -20,7 +20,7 @@ describe('protractor sample', function() {
   it('about test', function() {
     // menu
     var about = element(by.css('a[ng-link="about"]'));
-	about.click();    
+    about.click();
 
     // header
     var title = element(by.css('.navbar-brand'));
@@ -29,11 +29,11 @@ describe('protractor sample', function() {
     var aboutTitle = element(by.css('.panel-heading'));
     expect(aboutTitle.getText()).toEqual('Grunt The JavaScript Task Runner');
 
-    var gruntName = function(rowIndex){
+    var gruntName = function(rowIndex) {
       return aboutElement(rowIndex, by.css('th'));
     };
 
-    var aboutElement = function(rowIndex, selector){
+    var aboutElement = function(rowIndex, selector) {
       return element(by.repeater('list in about.list').row(rowIndex)).element(selector);
     };
 
@@ -46,7 +46,7 @@ describe('protractor sample', function() {
     var contact = element(by.css('a[ng-link="contact"]'));
 
     // about画面
-    contact.click();    
+    contact.click();
 
     // header
     var title = element(by.css('.navbar-brand'));

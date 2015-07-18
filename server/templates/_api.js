@@ -8,7 +8,7 @@
  * * put: /api/<%= name %>
  * * delete: /api/<%= name %>/:id
  * * delete: /api/<%= name %>
- * 
+ *
  * @module server.api.<%= name %>
  */
 'use strict';
@@ -25,7 +25,6 @@ exports = module.exports = function(app) {
   app.get('/api/<%= name %>/:id', function(req, res) {
     var id = req.params.id;
     // something
-
     res.status(200).json(<%= name %>);
   });
 
@@ -42,7 +41,6 @@ exports = module.exports = function(app) {
   app.delete('/api/<%= name %>/:id', function(req, res) {
     var id = req.params.id;
     // something
-
     res.sendStatus(200);
   });
 

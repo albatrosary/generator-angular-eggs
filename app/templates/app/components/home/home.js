@@ -11,7 +11,7 @@
     .controller('HomeController', HomeController);
 
   HomeController.$inject = [];
-  
+
   /**
    * HomeController
    *
@@ -19,11 +19,11 @@
    * @constructor
    */
   function HomeController() {
-  	console.log('HomeController Constructor');
+    console.log('HomeController Constructor');
   }
 
   /**
-   * The controller activate makes it convenient to re-use the logic 
+   * The controller activate makes it convenient to re-use the logic
    * for a refresh for the controller/View, keeps the logic together.
    *
    * @method activate

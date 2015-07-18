@@ -17,13 +17,13 @@
     .controller('AppController', AppController);
 
   AppController.$routeConfig = [
-    { path: '/',       redirectTo: '/home' },
-    { path: '/home',    component: 'home' },
-    { path: '/about',   component: 'about' },
-    { path: '/contact', component: 'contact' }
+    {path: '/',       redirectTo: '/home'},
+    {path: '/home',    component: 'home'},
+    {path: '/about',   component: 'about'},
+    {path: '/contact', component: 'contact'}
   ];
 
-  AppController.$inject = [];  
+  AppController.$inject = [];
 
   /**
    * AppController

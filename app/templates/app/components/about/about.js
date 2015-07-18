@@ -22,12 +22,12 @@
    */
   function AboutController(GruntfilesService) {
     console.log('AboutController Constructor');
-  
+
     this.GruntfilesService = GruntfilesService;
   }
 
   /**
-   * The controller activate makes it convenient to re-use the logic 
+   * The controller activate makes it convenient to re-use the logic
    * for a refresh for the controller/View, keeps the logic together.
    *
    * @method activate
@@ -41,7 +41,7 @@
       .then(setlist)
       .catch(error);
   };
-  
+
   /**
    * Angular ViewModel
    *
@@ -54,7 +54,7 @@
    * Setting the retrieved Gruntfile list to ViewModel
    *
    * @method setlist
-   * @param list {Object} Gruntfile list
+   * @param {Object} list Gruntfile list
    * @private
    */
   var setlist = function (list) {
@@ -63,9 +63,9 @@
 
   /**
    * It will capture the error at the time of Gruntfile data acquisition
-   * 
+   *
    * @method error
-   * @param e {Object} error message
+   * @param {Object} e error message
    * @private
    */
   var error = function (e) {
