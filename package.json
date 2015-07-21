@@ -1,6 +1,6 @@
 {
   "name": "generator-angular-eggs",
-  "version": "0.2.3",
+  "version": "0.2.4",
   "description": "Angular and Angular new Router with an Express server",
   "license": "MIT",
   "author": {
