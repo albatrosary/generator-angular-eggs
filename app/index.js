@@ -68,9 +68,13 @@ module.exports = yeoman.generators.Base.extend({
   git: function () {
     this.template('gitignore', '.gitignore');
     this.copy('gitattributes', '.gitattributes');
+  },
+  jscsrc: function () {
     this.copy('jscsrc', '.jscsrc');
   },
-
+  yorc: function () {
+    this.copy('yo-rc.json', '.yo-rc.json');
+  },
   bower: function () {
     var angularVersion = '~1.4.3';
     var bower = {
