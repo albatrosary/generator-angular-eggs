@@ -2,13 +2,27 @@
 
 var join = require('path').join;
 var yeoman = require('yeoman-generator');
+var yosay = require('yosay');
 var chalk = require('chalk');
+var wiredep = require('wiredep');
+var mkdirp = require('mkdirp');
+var _s = require('underscore.string');
 
 module.exports = yeoman.generators.Base.extend({
   constructor: function () {
     yeoman.generators.Base.apply(this, arguments);
     this.pkg = require('../package.json');
     this.appname = this.appname.replace(/\s+/g, '');
+
+    this.option('skip-welcome-message', {
+      desc: 'Skips the welcome message',
+      type: Boolean
+    });
+
+    this.option('skip-install-message', {
+      desc: 'Skips the message after the installation of dependencies',
+      type: Boolean
+    });
   },
 
   askFor: function () {
@@ -69,12 +83,6 @@ module.exports = yeoman.generators.Base.extend({
     this.template('gitignore', '.gitignore');
     this.copy('gitattributes', '.gitattributes');
   },
-  jscsrc: function () {
-    this.copy('jscsrc', '.jscsrc');
-  },
-  yorc: function () {
-    this.copy('yo-rc.json', '.yo-rc.json');
-  },
   bower: function () {
     var angularVersion = '~1.4.3';
     var bower = {
@@ -114,6 +122,14 @@ module.exports = yeoman.generators.Base.extend({
     this.write('bower.json', JSON.stringify(bower, null, 2));
   },
 
+  jscsrc: function () {
+    this.copy('jscsrc', '.jscsrc');
+  },
+  
+  yorc: function () {
+    this.copy('yo-rc.json', '.yo-rc.json');
+  },
+
   jshint: function () {
     this.copy('jshintrc', '.jshintrc');
   },
@@ -128,21 +144,53 @@ module.exports = yeoman.generators.Base.extend({
   },
 
   writeIndex: function () {
-    this.indexFile = this.engine(
-      this.readFileAsString(join(this.sourceRoot(), 'index.html')),
-      this
+    var bsPath;
+
+    // path prefix for Bootstrap JS files
+    if (this.includeBootstrap) {
+      if (this.includeSass) {
+        bsPath = '/bower_components/bootstrap-sass/assets/javascripts/bootstrap/';
+      } else {
+        bsPath = '/bower_components/bootstrap/js/';
+      }
+    }
+
+    this.fs.copyTpl(
+      this.templatePath('index.html'),
+      this.destinationPath('app/index.html'),
+      {
+        appname: this.appname,
+        includeSass: this.includeSass,
+        includeBootstrap: this.includeBootstrap,
+        includeModernizr: this.includeModernizr,
+        bsPath: bsPath,
+        bsPlugins: [
+          'affix',
+          'alert',
+          'dropdown',
+          'tooltip',
+          'modal',
+          'transition',
+          'button',
+          'popover',
+          'carousel',
+          'scrollspy',
+          'collapse',
+          'tab'
+        ]
+      }
     );
   },
 
   app: function () {
 
     this.directory('app');
-    this.mkdir('app/scripts');
-    this.mkdir('app/styles');
-    this.mkdir('app/images');
-    this.mkdir('app/directives');
+    mkdirp('app/scripts');
+    mkdirp('app/styles');
+    mkdirp('app/images');
+    mkdirp('app/directives');
 
-    this.write('app/index.html', this.indexFile);
+    //this.write('app/index.html', this.indexFile);
 
     this.copy('main.js',   'app/scripts/main.js');
     this.copy('config.js', 'app/scripts/config.js');
