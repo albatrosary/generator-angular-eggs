@@ -9,6 +9,7 @@ var mkdirp = require('mkdirp');
 var _s = require('underscore.string');
 
 module.exports = yeoman.generators.Base.extend({
+
   constructor: function () {
     yeoman.generators.Base.apply(this, arguments);
     this.pkg = require('../package.json');
@@ -125,7 +126,7 @@ module.exports = yeoman.generators.Base.extend({
   jscsrc: function () {
     this.copy('jscsrc', '.jscsrc');
   },
-  
+
   yorc: function () {
     this.copy('yo-rc.json', '.yo-rc.json');
   },
@@ -201,7 +202,7 @@ module.exports = yeoman.generators.Base.extend({
     if (this.includeModernizr) {
       this.copy('options/modernizr.js', 'config/modernizr.js');
     }
-    
+
     if (this.includeSass) {
       this.copy('options/sass.js', 'config/sass.js');
     }
@@ -216,13 +217,41 @@ module.exports = yeoman.generators.Base.extend({
     this.directory('test');
   },
   install: function () {
-    this.on('end', function () {
-      if (!this.options['skip-install']) {
-        this.installDependencies({
-          skipMessage: this.options['skip-install-message'],
-          skipInstall: this.options['skip-install']
-        });
-      }
+    this.installDependencies({
+      skipInstall: this.options['skip-install'],
+      skipMessage: this.options['skip-install-message']
     });
+  },
+  end: function () {
+    var bowerJson = this.fs.readJSON(this.destinationPath('bower.json'));
+    var howToInstall =
+      '\nAfter running ' +
+      chalk.yellow.bold('npm install && bower install') +
+      ', inject your' +
+      '\nfront end dependencies by running ' +
+      chalk.yellow.bold('grunt wiredep') +
+      '.';
+
+    if (this.options['skip-install']) {
+      this.log(howToInstall);
+      return;
+    }
+
+    // wire Bower packages to .html
+    wiredep({
+      bowerJson: bowerJson,
+      src: 'app/index.html',
+      exclude: ['bootstrap.js'],
+      ignorePath: /^(\.\.\/)*\.\./
+    });
+
+    if (this.includeSass) {
+      // wire Bower packages to .scss
+      wiredep({
+        bowerJson: bowerJson,
+        src: 'app/styles/*.scss',
+        ignorePath: /^(\.\.\/)+/
+      });
+    }
   }
 });
