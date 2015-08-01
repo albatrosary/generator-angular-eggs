@@ -14,6 +14,7 @@
       options: {
         files: [
           '<%%= paths.app %>/{,*/}*.html',
+          '<%%= paths.app %>/{,directives,components}/{,*/}*.html',
           '.tmp/styles/{,*/}*.css',
           '<%%= paths.app %>/images/{,*/}*',
           '<%%= paths.app %>/scripts/{,*/}*.js'
