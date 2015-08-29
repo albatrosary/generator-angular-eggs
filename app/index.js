@@ -85,7 +85,7 @@ module.exports = yeoman.generators.Base.extend({
     this.copy('gitattributes', '.gitattributes');
   },
   bower: function () {
-    var angularVersion = '~1.4.4';
+    var angularVersion = '~1.4.5';
     var bower = {
       name: this.appname,
       private: true,
