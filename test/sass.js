@@ -26,8 +26,4 @@ describe('sass', function () {
   it('adds the Grunt task', function () {
     assert.fileContent('config/sass.js', 'sass');
   });
-
-  it('adds the HTML description', function () {
-    assert.fileContent('app/components/home/home.html', 'Sass');
-  });
 });
