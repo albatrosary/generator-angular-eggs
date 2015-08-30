@@ -1,7 +1,7 @@
 {
   "name": "generator-angular-eggs",
   "version": "0.2.9",
-  "description": "Angular and Angular new Router with an Express server",
+  "description": "Angular 1.4, Angular new Router and Twitter Bootstrap v4 with an Express server",
   "license": "MIT",
   "author": {
     "name": "Fumio SAGAWA",

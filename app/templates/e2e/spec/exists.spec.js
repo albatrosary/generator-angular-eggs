@@ -11,9 +11,8 @@ describe('protractor sample', function() {
     home.click();
 
     // header
-    var title = element(by.css('.navbar-brand'));
-
-    expect(title.getText()).toEqual('<%= appname %>');
+    var title = element(by.css('footer'));
+    expect(title.getText()).toEqual('angular-eggs');
 
   });
 
@@ -23,10 +22,10 @@ describe('protractor sample', function() {
     about.click();
 
     // header
-    var title = element(by.css('.navbar-brand'));
-    expect(title.getText()).toEqual('<%= appname %>');
+    var title = element(by.css('footer'));
+    expect(title.getText()).toEqual('angular-eggs');
 
-    var aboutTitle = element(by.css('.panel-heading'));
+    var aboutTitle = element(by.css('h4'));
     expect(aboutTitle.getText()).toEqual('Grunt The JavaScript Task Runner');
 
     var gruntName = function(rowIndex) {
@@ -49,7 +48,7 @@ describe('protractor sample', function() {
     contact.click();
 
     // header
-    var title = element(by.css('.navbar-brand'));
-    expect(title.getText()).toEqual('<%= appname %>');
+    var title = element(by.css('footer'));
+    expect(title.getText()).toEqual('angular-eggs');
   });
 });

@@ -1,24 +1,18 @@
-<div class="navbar navbar-default navbar-fixed-top">
-  <div class="container">
-    <div class="navbar-header">
-      <button type="button" class="navbar-toggle collapsed"
-              data-toggle="collapse" data-target="#app-nav">
-        <span class="sr-only">Toggle</span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-      </button>
-      <a class="navbar-brand" href=""><%= appname %></a>
-    </div>
-    <div class="collapse navbar-collapse" id="app-nav">
-      <ul class="nav navbar-nav">
-        <li><a ng-link="home">Home</a></li>
-        <li><a ng-link="about">About</a></li>
-        <li><a ng-link="contact">Contact</a></li>
-      </ul>
-      <ul class="nav navbar-nav navbar-right">
-        <li><a href="https://github.com/albatrosary/generator-angular-eggs/blob/master/readme.md">github</a></li>
-      </ul>
-    </div>
+<header class="navbar navbar-light navbar-fixed-top bg-faded bd-navbar">
+  <div class="clearfix hidden-sm-up">
+    <button class="navbar-toggler pull-right hidden-sm-up collapsed" type="button" data-toggle="collapse" data-target="#app-nav"  aria-expanded="false">
+      &#9776;
+    </button>
+    <a class="navbar-brand" href="/"><%= appname %></a>
   </div>
-</div>
+
+  <nav class="navbar-toggleable-xs collapse" id="app-nav" aria-expanded="false" style="height: 0px;">
+    <ul class="nav navbar-nav">
+      <li class="hidden-xs-down"><a class="navbar-brand" href="/"><%= appname %></a></li>
+      <li class="nav-item"><a class="nav-link" ng-link="home">Home</a></li>
+      <li class="nav-item"><a class="nav-link" ng-link="about">About</a></li>
+      <li class="nav-item"><a class="nav-link" ng-link="contact">Contact</a></li>
+      <li class="nav-item"><a class="nav-link" href="https://github.com/albatrosary/generator-angular-eggs/blob/master/readme.md">github</a></li>
+    </ul>
+  </nav>
+</header>

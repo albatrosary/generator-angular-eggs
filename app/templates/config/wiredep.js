@@ -4,9 +4,8 @@
   module.exports = {
     app: {
       ignorePath: /^<%%= paths.app %>\/|\.\.\//,
-      src: ['<%%= paths.app %>/index.html'],<% if (includeSass) { %>
-      exclude: ['bower_components/bootstrap-sass-official/assets/javascripts/bootstrap.js']<% } else { %>
-      exclude: ['bower_components/bootstrap/dist/js/bootstrap.js']<% } %>
+      src: ['<%%= paths.app %>/index.html'],
+      exclude: ['bower_components/bootstrap/dist/js/bootstrap.js']
     },
     test: {
       devDependencies: true,
