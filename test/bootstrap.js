@@ -23,10 +23,6 @@ describe('bootstrap', function () {
       assert.noFileContent('bower.json', 'jquery');
     });
 
-    it('adds Bootstrap paths to Gruntfile.js', function () {
-      assert.fileContent('config/copy.js', 'bootstrap');
-    });
-
     it('adds the HTML description', function () {
       assert.fileContent('app/index.html', 'bootstrap');
     });
@@ -43,11 +39,6 @@ describe('bootstrap', function () {
         ]})
         .on('end', done);
     });
-
-    it('uses Bootstrap Sass', function () {
-      assert.fileContent('app/index.html', 'bootstrap-sass');
-      assert.fileContent('config/copy.js', '/bootstrap-sass-official/');
-    });
   });
 
   describe('without Sass', function () {
@@ -63,7 +54,6 @@ describe('bootstrap', function () {
 
     it('uses regular Bootstrap', function () {
       assert.fileContent('bower.json', '"bootstrap"');
-      assert.fileContent('config/copy.js', '/bootstrap/');
     });
   });
 });

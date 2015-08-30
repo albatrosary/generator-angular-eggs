@@ -26,8 +26,4 @@ describe('modernizr', function () {
     assert.fileContent('Gruntfile.js', 'modernizr');
     assert.fileContent('config/modernizr.js', 'modernizr');
   });
-
-  it('adds the HTML description', function () {
-    assert.fileContent('app/components/home/home.html', 'Modernizr');
-  });
 });
