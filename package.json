@@ -42,19 +42,19 @@
     "express"
   ],
   "dependencies": {
-    "chalk": "^1.1.0",
+    "chalk": "^1.1.1",
     "generator-jasmine": "^0.2.1",
     "generator-mocha": "^0.2.0",
-    "istanbul": "~0.3.17",
+    "istanbul": "~0.3.19",
     "mkdirp": "^0.5.1",
-    "underscore.string": "^3.1.1",
+    "underscore.string": "^3.2.0",
     "wiredep": "^2.2.2",
-    "yeoman-generator": "^0.20.2",
+    "yeoman-generator": "^0.20.3",
     "yosay": "^1.0.5"
   },
   "devDependencies": {
     "grunt-cli": "^0.1.13",
-    "mocha": "*",
+    "mocha": "^2.3.0",
     "yeoman-assert": "^2.0.0"
   },
   "peerDependencies": {}
