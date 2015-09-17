@@ -10,13 +10,16 @@
 
 exports = module.exports = function(app) {
 
+  var json = require('../data/app.json');
   var Db = require('tingodb')().Db;
-  var db = new Db('./server/data/', {});
-  var collection = db.collection('gruntfiles');
 
-  app.get('/api/gruntfiles', function(req, res) {
-    collection.find().toArray(function(err, items) {
-      res.status(200).json(items);
+  var db = new Db('./server/data/', {});
+  var fs = require('fs');
+
+  if (!fs.existsSync('./server/data/gruntfiles')) {
+    var collection = db.collection('gruntfiles');
+    collection.insert(json, {w:1}, function(err, result) {
+      console.log(err);
     });
-  });
+  }
 };

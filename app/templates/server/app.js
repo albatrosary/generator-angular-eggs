@@ -21,6 +21,9 @@ server.listen(port, process.env.OPENSHIFT_NODEJS_IP || process.env.IP || undefin
   console.log('Express server listening on %d, in %s mode', port, app.get('env'));
 });
 
+// Application Seed
+require('./config/seed')(app);
+
 // API definition
 require('./api/gruntfiles')(app);
 
