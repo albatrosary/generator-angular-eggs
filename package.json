@@ -1,7 +1,7 @@
 {
   "name": "generator-angular-eggs",
-  "version": "1.0.0",
-  "description": "Angular 1.4, Angular new Router, Bootstrap v4 and TingoDB(like MongoDB) with an Express server",
+  "version": "1.1.0",
+  "description": "Angular 1.5(alpha), Angular new Router, Bootstrap v4(alpha) and TingoDB(like MongoDB) with an Express server",
   "license": "MIT",
   "author": {
     "name": "Fumio SAGAWA",
