@@ -45,7 +45,7 @@
     "chalk": "^1.1.1",
     "generator-jasmine": "^0.2.1",
     "generator-mocha": "^0.2.0",
-    "istanbul": "~0.3.20",
+    "istanbul": "^0.4.0",
     "mkdirp": "^0.5.1",
     "underscore.string": "^3.2.2",
     "wiredep": "^2.2.2",
