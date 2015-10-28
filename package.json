@@ -49,7 +49,7 @@
     "mkdirp": "^0.5.1",
     "underscore.string": "^3.2.2",
     "wiredep": "^2.2.2",
-    "yeoman-generator": "^0.20.3",
+    "yeoman-generator": "^0.21.1",
     "yosay": "^1.0.5"
   },
   "devDependencies": {
