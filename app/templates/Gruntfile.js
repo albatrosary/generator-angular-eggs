@@ -46,7 +46,8 @@ module.exports = function (grunt) {
       'injector',
       'wiredep',
       'jshint',
-      'jscs',
+      'jscs',<% if (includeTypeScript) { %>
+      'typescript',<% } %>
       'concurrent:server',
       'autoprefixer',
       'express:dev',
@@ -72,7 +73,8 @@ module.exports = function (grunt) {
         'wiredep:test',
         'injector:test',
         'jshint',
-        'jscs',
+        'jscs',<% if (includeTypeScript) { %>
+        'typescript',<% } %>
         'karma:single',
         'browserSync:coverage'
       ]);
@@ -81,7 +83,8 @@ module.exports = function (grunt) {
         'wiredep:test',
         'injector:test',
         'jshint',
-        'jscs',
+        'jscs',<% if (includeTypeScript) { %>
+        'typescript',<% } %>
         'karma:single'
       ]);
     }
@@ -90,7 +93,8 @@ module.exports = function (grunt) {
   grunt.registerTask('build', [
     'clean:dist',
     'injector',
-    'wiredep',
+    'wiredep',<% if (includeTypeScript) { %>
+    'typescript',<% } %>
     'useminPrepare',
     'concurrent:dist',
     'autoprefixer',
