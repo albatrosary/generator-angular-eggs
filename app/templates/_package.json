@@ -28,7 +28,8 @@
     "grunt-protractor-webdriver": "^0.2.5",
     "grunt-run": "^0.5.2",
     "grunt-svgmin": "^2.0.1",<% if (includeSass) { %>
-    "grunt-sass": "^1.1.0",<% } %>
+    "grunt-sass": "^1.1.0",<% } %><% if (includeTypeScript) { %>
+    "grunt-typescript": "^0.8.0",<% } %>
     "grunt-usemin": "^3.1.1",
     "grunt-wiredep": "^2.0.0",
     "http-proxy-middleware": "0.9.0",

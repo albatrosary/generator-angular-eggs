@@ -43,6 +43,10 @@ module.exports = yeoman.generators.Base.extend({
       name: 'features',
       message: 'What more would you like?',
       choices: [{
+        name: 'TypeScript',
+        value: 'includeTypeScript',
+        checked: true
+      },{
         name: 'Bootstrap',
         value: 'includeBootstrap',
         checked: true
@@ -64,6 +68,7 @@ module.exports = yeoman.generators.Base.extend({
         return features && features.indexOf(feat) !== -1;
       }
 
+      this.includeTypeScript = hasFeature('includeTypeScript');
       this.includeSass = hasFeature('includeSass');
       this.includeBootstrap = hasFeature('includeBootstrap');
       this.includeModernizr = hasFeature('includeModernizr');
@@ -160,6 +165,7 @@ module.exports = yeoman.generators.Base.extend({
       this.destinationPath('app/index.html'),
       {
         appname: this.appname,
+        includeTypeScript: this.includeTypeScript,
         includeSass: this.includeSass,
         includeBootstrap: this.includeBootstrap,
         includeModernizr: this.includeModernizr,
