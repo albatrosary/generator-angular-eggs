@@ -198,8 +198,13 @@ module.exports = yeoman.generators.Base.extend({
 
     //this.write('app/index.html', this.indexFile);
 
-    this.copy('main.js',   'app/scripts/main.js');
-    this.copy('config.js', 'app/scripts/config.js');
+    if (this.includeTypeScript) {
+      this.copy('main.ts',   'app/scripts/main.ts');
+      this.copy('config.ts', 'app/scripts/config.ts');
+    } else {
+      this.copy('main.js',   'app/scripts/main.js');
+      this.copy('config.js', 'app/scripts/config.js');
+    }
   },
   config: function () {
     this.directory('config');
@@ -210,6 +215,10 @@ module.exports = yeoman.generators.Base.extend({
 
     if (this.includeSass) {
       this.copy('options/sass.js', 'config/sass.js');
+    }
+    
+    if (this.includeTypeScript) {
+      this.copy('options/typescript.js', 'config/typescript.js');
     }
   },
   e2e: function () {
