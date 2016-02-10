@@ -7,7 +7,7 @@ describe('protractor sample', function() {
 
   it('home test', function() {
     // menu
-    var home = element(by.css('a[ng-link="home"]'));
+    var home = element(by.css('a[ng-link="[\'Home\']"]'));
     home.click();
 
     // header
@@ -18,7 +18,7 @@ describe('protractor sample', function() {
 
   it('about test', function() {
     // menu
-    var about = element(by.css('a[ng-link="about"]'));
+    var about = element(by.css('a[ng-link="[\'About\']"]'));
     about.click();
 
     // header
@@ -33,7 +33,7 @@ describe('protractor sample', function() {
     };
 
     var aboutElement = function(rowIndex, selector) {
-      return element(by.repeater('list in about.list').row(rowIndex)).element(selector);
+      return element(by.repeater('list in $ctrl.list').row(rowIndex)).element(selector);
     };
 
     expect(gruntName(0).getText()).toEqual('connect-history-api-fallback');
@@ -42,7 +42,7 @@ describe('protractor sample', function() {
 
   it('contact - display', function() {
     // menu
-    var contact = element(by.css('a[ng-link="contact"]'));
+    var contact = element(by.css('a[ng-link="[\'Contact\']"]'));
 
     // about画面
     contact.click();

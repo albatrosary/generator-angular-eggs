@@ -3,74 +3,34 @@
  *
  * @module <%= appname %>.components.<%= name %>
  */
+/* global angular */
 (function () {
   'use strict';
 
   angular
     .module('<%= appname %>.components.<%= name %>', [])
-    .controller('<%= className %>Controller', <%= className %>Controller);
+    .component('<%= name %>Controller', {
+      controller: <%= className %>Controller,
+      templateUrl: 'components/<%= name %>/<%= name %>.html',
+      $canActivate: $canActivate
+    });
 
   <%= className %>Controller.$inject = [];
 
-  /**
-   * <%= className %>Controller
-   *
-   * @class <%= className %>Controller
-   * @constructor
-   */
+  var ctrl;
+
   function <%= className %>Controller() {
     console.log('<%= className %>Controller Constructor');
+    ctrl = this;
   }
 
-  /**
-   * The controller canActivate makes it convenient to re-use the logic
-   * for a refresh for the controller/View, keeps the logic together.
-   *
-   * @method canActivate
-   */
-  <%= className %>Controller.prototype.canActivate = function() {
-    console.log('<%= className %>Controller canActivate Method');
+  function $canActivate() {
+    console.log('<%= className %>Controller $canActivate');
     return true;
-  };
+  }
 
-  /**
-   * The controller activate makes it convenient to re-use the logic
-   * for a refresh for the controller/View, keeps the logic together.
-   *
-   * @method activate
-   */
-  <%= className %>Controller.prototype.activate = function() {
-    console.log('<%= className %>Controller activate Method');
-    vm = this;
+  <%= className %>Controller.prototype.$onInit = function() {
+    console.log('<%= className %>Controller $onInit');
+    ctrl.name = '<%= className %>';
   };
-
-  /**
-   * The controller canDeactivate makes it convenient to re-use the logic
-   * for a refresh for the controller/View, keeps the logic together.
-   *
-   * @method canDeactivate
-   */
-  <%= className %>Controller.prototype.canDeactivate = function() {
-    console.log('<%= className %>Controller canDeactivate Method');
-    return true;
-  };
-
-  /**
-   * The controller deactivate makes it convenient to re-use the logic
-   * for a refresh for the controller/View, keeps the logic together.
-   *
-   * @method deactivate
-   */
-  <%= className %>Controller.prototype.deactivate = function() {
-    console.log('<%= className %>Controller deactivate Method');
-    vm = this;
-  };
-
-  /**
-   * Angular ViewModel
-   *
-   * @property vm
-   * @type {Object}
-   */
-  var vm;
 })();

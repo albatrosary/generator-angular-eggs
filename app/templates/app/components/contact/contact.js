@@ -8,7 +8,11 @@
 
   angular
     .module('<%= appname %>.components.contact', [])
-    .controller('ContactController', ContactController);
+    .component('contactController', {
+      controller: ContactController,
+      templateUrl: 'components/contact/contact.html',
+      $canActivate: $canActivate
+    });
 
   ContactController.$inject = [];
 
@@ -20,64 +24,32 @@
    */
   function ContactController() {
     console.log('ContactController Constructor');
+    ctrl = this;
   }
 
-  /**
-   * The controller canActivate makes it convenient to re-use the logic
-   * for a refresh for the controller/View, keeps the logic together.
-   *
-   * @method canActivate
-   */
-  ContactController.prototype.canActivate = function() {
-    console.log('ContactController canActivate Method');
+  function $canActivate() {
+    console.log('ContactController $canActivate');
     return true;
-  };
+  }
 
-  /**
-   * The controller activate makes it convenient to re-use the logic
-   * for a refresh for the controller/View, keeps the logic together.
-   *
-   * @method activate
-   */
-  ContactController.prototype.activate = function() {
-    console.log('ContactController activate Method');
-    vm = this;
-    vm.case1 = 20;
+  ContactController.prototype.$onInit = function() {
+    console.log('ContactController $onInit');
+
+    ctrl.case1 = 20;
     someMethod();
   };
 
   /**
-   * The controller canDeactivate makes it convenient to re-use the logic
-   * for a refresh for the controller/View, keeps the logic together.
-   *
-   * @method canDeactivate
-   */
-  ContactController.prototype.canDeactivate = function() {
-    console.log('ContactController canDeactivate Method');
-    return true;
-  };
-
-  /**
-   * The controller deactivate makes it convenient to re-use the logic
-   * for a refresh for the controller/View, keeps the logic together.
-   *
-   * @method deactivate
-   */
-  ContactController.prototype.deactivate = function() {
-    console.log('ContactController deactivate Method');
-  };
-
-  /**
-   * @property vm
+   * @property ctrl
    * @private
    */
-  var vm;
+  var ctrl;
 
   /**
    * @method someMethod
    * @private
    */
   var someMethod = function () {
-    vm.case2 = 10;
+    ctrl.case2 = 10;
   };
 })();

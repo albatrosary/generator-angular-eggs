@@ -50,10 +50,6 @@ module.exports = yeoman.generators.Base.extend({
         name: 'Sass',
         value: 'includeSass',
         checked: false
-      },{
-        name: 'Modernizr',
-        value: 'includeModernizr',
-        checked: false
       }]
     }];
 
@@ -85,7 +81,7 @@ module.exports = yeoman.generators.Base.extend({
     this.copy('gitattributes', '.gitattributes');
   },
   bower: function () {
-    var angularVersion = '~v1.5.0-beta.2';
+    var angularVersion = '~v1.5.0';
     var bower = {
       name: this.appname,
       private: true,
@@ -100,16 +96,8 @@ module.exports = yeoman.generators.Base.extend({
       bower.dependencies.jquery = '~2.1.4';
     }
 
-    if (this.includeModernizr) {
-      bower.dependencies.modernizr = '~2.8.3';
-    }
-
     bower.dependencies.angular = angularVersion;
-    bower.dependencies['angular-new-router'] = '~0.5.3';
     bower.dependencies['angular-resource'] = angularVersion;
-
-    bower.overrides['angular-new-router'] = {};
-    bower.overrides['angular-new-router'].main = 'dist/router.es5.js';
 
     if (this.includeBootstrap && !this.includeSass) {
       bower.overrides['bootstrap'] = {};

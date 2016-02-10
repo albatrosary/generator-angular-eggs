@@ -22,7 +22,8 @@
         server: {
           baseDir: ['.tmp', '<%%= paths.app %>'],
           routes: {
-            '/bower_components': './bower_components'
+            '/bower_components': './bower_components',
+            '/node_modules': './node_modules'
           },
           /* SPA html5 mode support */
           middleware: [historyApiFallback(), proxy]
@@ -60,7 +61,8 @@
         server: {
           baseDir: ['.tmp', '<%%= paths.app %>'],
           routes: {
-            '/bower_components': './bower_components'
+            '/bower_components': './bower_components',
+            '/node_modules': './node_modules'
           },
           /* SPA html5 mode support */
           middleware: [historyApiFallback(), proxy]

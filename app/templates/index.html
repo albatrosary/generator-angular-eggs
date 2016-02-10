@@ -29,7 +29,7 @@
 
     <div class="container">
 
-      <div ng-viewport></div>
+      <div ng-outlet></div>
 
       <div ng-include="'components/footer/footer.html'"></div>
 
@@ -38,6 +38,7 @@
     <!-- build:js(.) scripts/vendor.js -->
     <!-- bower:js -->
     <!-- endbower -->
+    <script src="node_modules/ngcomponentrouter/angular_1_router.js"></script>
     <!-- endbuild -->
 
     <% if (includeBootstrap) { %>
