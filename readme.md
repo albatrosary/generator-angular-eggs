@@ -30,21 +30,11 @@ yo angular-eggs
 
 ## Notes
 
-Component of Component Router is restrict: 'A', but Component is restrict: 'E'. This option is "No (restricted to elements only)".
-[see](https://docs.angularjs.org/guide/component)
-But soon it heals, but now there is a need to change the code.
+There is an issue in the current ngComponentRouter. 
 
-(node_modules/ngcomponentrouter/angular_1_router.js - L145)
-before:
-```javascript
-this.controller.$$template = '<div ' + dashCase(componentName) + '></div>';
-```
+https://github.com/excellalabs/ngComponentRouter/issues/2
 
-after:
-```javascript
-this.controller.$$template = '<' + dashCase(componentName) + '></' + dashCase(componentName) + '>';
-```
-
+But immediately resolve.
 
 ## Generators
 
