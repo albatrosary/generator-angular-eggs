@@ -118,8 +118,8 @@ module.exports = yeoman.generators.Base.extend({
     this.copy('yo-rc.json', '.yo-rc.json');
   },
 
-  jshint: function () {
-    this.copy('jshintrc', '.jshintrc');
+  eslint: function () {
+    this.copy('eslintrc', '.eslintrc');
   },
 
   editorConfig: function () {

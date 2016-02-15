@@ -21,7 +21,7 @@ module.exports = function (grunt) {
     },
     pkg: grunt.file.readJSON('package.json'),
     jshintrc: {
-      app: grunt.file.readJSON('.jshintrc')
+      app: grunt.file.readJSON('.eslintrc')
     } 
   };
 
@@ -45,7 +45,7 @@ module.exports = function (grunt) {
       'clean:server',
       'injector',
       'wiredep',
-      'jshint',
+      'eslint',
       'jscs',
       'concurrent:server',
       'autoprefixer',
@@ -71,7 +71,7 @@ module.exports = function (grunt) {
       grunt.task.run([
         'wiredep:test',
         'injector:test',
-        'jshint',
+        'eslint',
         'jscs',
         'karma:single',
         'browserSync:coverage'
@@ -80,7 +80,7 @@ module.exports = function (grunt) {
       grunt.task.run([
         'wiredep:test',
         'injector:test',
-        'jshint',
+        'eslint',
         'jscs',
         'karma:single'
       ]);
@@ -105,14 +105,14 @@ module.exports = function (grunt) {
   ]);
 
   grunt.registerTask('default', [
-    'newer:jshint',
+    'newer:eslint',
     'test',
     'build',
     'e2e'
   ]);
 
   grunt.registerTask('doc', [
-    'jshint',
+    'eslint',
     'clean:doc',
     'yuidoc',
     'browserSync:doc'

@@ -1,0 +1,33 @@
+{
+  "parser": "espree",
+  "ecmaFeatures": {},
+  "rules": {
+    "block-scoped-var": 2,
+    "curly": [2, "all"],
+    "default-case": 2,
+    "no-div-regex": 2,
+    "no-else-return": 2,
+    "no-eq-null": 2,
+    "no-floating-decimal": 2,
+    "no-multi-spaces": [2, {"exceptions": {"Property": true, "ImportDeclaration": true, "VariableDeclarator": true, "AssignmentExpression": true}}],
+    "no-self-compare": 2,
+    "wrap-iife": [2, "inside"],
+
+    "complexity": [1, 3],
+    "dot-notation": 1,
+    "guard-for-in": 1,
+    "no-extend-native": 1,
+    "no-iterator": 1,
+    "no-loop-func": 1,
+    "no-multi-str": 1,
+    "no-process-env": 1,
+    "no-proto": 1,
+    "no-throw-literal": 1,
+    "no-unused-expressions": 1,
+    "radix": 1,
+
+    "no-alert": 0,
+    "no-extra-bind": 0,
+    "yoda": 0
+  }
+}
