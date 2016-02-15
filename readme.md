@@ -28,14 +28,6 @@ Run `yo angular-eggs`:
 yo angular-eggs
 ```
 
-## Notes
-
-There is an issue in the current ngComponentRouter. 
-
-https://github.com/excellalabs/ngComponentRouter/issues/2
-
-But immediately resolve.
-
 ## Generators
 
 Available generators:
