@@ -43,8 +43,7 @@
     "load-grunt-tasks": "^3.3.0",
     "protractor": "^2.5.1",
     "q": "^1.4.1",
-    "time-grunt": "^1.2.2",
-    "tingodb": "^0.4.2"
+    "time-grunt": "^1.2.2"
   },
   "scripts": {
     "install": "node ./node_modules/protractor/bin/webdriver-manager update"
@@ -52,9 +51,10 @@
   "engines": {
     "node": ">=0.12.0"
   },
-  "dependencies": {
+  "dependencies": {,
     "body-parser": "^1.14.1",
     "express": "^4.13.3",
-    "ngcomponentrouter": "^1.4.1"
+    "ngcomponentrouter": "^1.4.1",
+    "tingodb": "^0.4.2"
   }
 }
