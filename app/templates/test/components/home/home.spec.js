@@ -5,15 +5,15 @@
 
     beforeEach(module('<%= appname %>.components.home'));
 
-    var HomeController;
+    var Controller;
 
     beforeEach(inject(function ($controller) {
-      HomeController = $controller('HomeController');
+      Controller = $controller('HomeController');
     }));
 
     describe('HomeController', function() {
       it('Test Case', function () {
-        HomeController.activate();
+        Controller.activate();
       });
     });
   });

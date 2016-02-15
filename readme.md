@@ -38,6 +38,25 @@ Available generators:
 - yo angular-eggs:directives [name]
 - yo angular-eggs:server [name]
  
+## Notes
+
+`yo angular-eggs:components [name]` command creates a file as follows:
+
+```bash
+app/components/[name]/[name].html
+app/components/[name]/[name].js
+test/components/[name]/[name].spec.js
+```
+
+When `name` is `appName`:
+
+```bash
+app/components/appname/appname.html
+app/components/appname/appname.js
+test/components/appname/appname.spec.js
+```
+
+Component name is `appName`. So CustomTag name is `app-name`
 
 ### Components
 

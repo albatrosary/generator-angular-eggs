@@ -8,32 +8,32 @@
 
   angular
     .module('<%= appname %>.components.contact', [])
-    .component('contactController', {
-      controller: ContactController,
+    .component('contact', {
+      controller: Controller,
       templateUrl: 'components/contact/contact.html',
       $canActivate: $canActivate
     });
 
-  ContactController.$inject = [];
+  Controller.$inject = [];
 
   /**
-   * ContactController
+   * Controller
    *
-   * @class ContactController
+   * @class Controller
    * @constructor
    */
-  function ContactController() {
-    console.log('ContactController Constructor');
+  function Controller() {
+    console.log('Contact Controller Constructor');
     ctrl = this;
   }
 
   function $canActivate() {
-    console.log('ContactController $canActivate');
+    console.log('Contact Controller $canActivate');
     return true;
   }
 
-  ContactController.prototype.$onInit = function() {
-    console.log('ContactController $onInit');
+  Controller.prototype.$onInit = function() {
+    console.log('Contact Controller $onInit');
 
     ctrl.case1 = 20;
     someMethod();

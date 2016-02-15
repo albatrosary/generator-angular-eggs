@@ -1,21 +1,21 @@
 (function() {
   'use strict';
 
-  describe('Controller: AboutController', function () {
+  describe('Controller: About Component', function () {
 
     beforeEach(module('<%= appname %>.components.about'));
     beforeEach(module('<%= appname %>.mock.service.gruntfiles'));
 
-    var AboutController;
+    var Controller;
 
     beforeEach(inject(function ($controller) {
-      AboutController = $controller('AboutController');
+      Controller = $controller('Controller');
     }));
 
     describe('AboutController', function() {
       it('Set Grunt List', function() {
-        AboutController.activate();
-        expect(AboutController.list[0].name).toEqual('connect-history-api-fallback');
+        Controller.activate();
+        expect(Controller.list[0].name).toEqual('connect-history-api-fallback');
       });
     });
 

@@ -1,19 +1,19 @@
 (function() {
   'use strict';
 
-  describe('Controller: <%= className %>Controller', function() {
+  describe('Controller: <%= className %> Controller', function() {
 
     beforeEach(module('<%= appname %>.components.<%= name %>'));
 
-    var <%= className %>Controller;
+    var Controller;
 
     beforeEach(inject(function($controller) {
-      <%= className %>Controller = $controller('<%= className %>Controller');
+      Controller = $controller('Controller');
     }));
 
-    describe('<%= className %>Controller', function() {
+    describe('<%= className %> Controller', function() {
       it('Test Case', function() {
-        <%= className %>Controller.activate();
+        Controller.$canActivate();
       });
     });
   });

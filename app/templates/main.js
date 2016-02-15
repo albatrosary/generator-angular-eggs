@@ -27,9 +27,9 @@
    */
   function AppController ($router) {
     $router.config([
-      {path: '/home',    name:'Home',    component: 'homeController', useAsDefault: true},
-      {path: '/about',   name:'About',   component: 'aboutController'},
-      {path: '/contact', name:'Contact', component: 'contactController'}
+      {path: '/home',    name:'Home',    component: 'home', useAsDefault: true},
+      {path: '/about',   name:'About',   component: 'about'},
+      {path: '/contact', name:'Contact', component: 'contact'}
     ]);
   }
 })();

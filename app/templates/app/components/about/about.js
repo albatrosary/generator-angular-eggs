@@ -10,13 +10,13 @@
     .module('<%= appname %>.components.about', [
       '<%= appname %>.service.gruntfiles'
     ])
-    .component('aboutController', {
-      controller: AboutController,
+    .component('about', {
+      controller: Controller,
       templateUrl: 'components/about/about.html',
       $canActivate: $canActivate
     });
 
-  AboutController.$inject = ['GruntfilesService'];
+  Controller.$inject = ['GruntfilesService'];
 
   /**
    * AboutController
@@ -24,8 +24,8 @@
    * @class AboutController
    * @constructor
    */
-  function AboutController(GruntfilesService) {
-    console.log('AboutController Constructor');
+  function Controller(GruntfilesService) {
+    console.log('About Controller Constructor');
 
     this.GruntfilesService = GruntfilesService;
   }
@@ -37,7 +37,7 @@
    * @method canActivate
    */
   function $canActivate () {
-    console.log('AboutController canActivate Method');
+    console.log('About Controller canActivate Method');
     return true;
   }
 
@@ -47,8 +47,8 @@
    *
    * @method $onInit
    */
-  AboutController.prototype.$onInit = function() {
-    console.log('AboutController $onInit');
+  Controller.prototype.$onInit = function() {
+    console.log('About Controller $onInit');
 
     ctrl = this;
     var grunt = this.GruntfilesService.query().$promise;

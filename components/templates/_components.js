@@ -1,36 +1,36 @@
 /**
  * <%= className %> Components module.
  *
- * @module <%= appname %>.components.<%= name %>
+ * @module <%= appname %>.components.<%= text %>
  */
 /* global angular */
 (function () {
   'use strict';
 
   angular
-    .module('<%= appname %>.components.<%= name %>', [])
-    .component('<%= name %>Controller', {
-      controller: <%= className %>Controller,
+    .module('<%= appname %>.components.<%= text %>', [])
+    .component('<%= text %>', {
+      controller: Controller,
       templateUrl: 'components/<%= name %>/<%= name %>.html',
       $canActivate: $canActivate
     });
 
-  <%= className %>Controller.$inject = [];
+  Controller.$inject = [];
 
   var ctrl;
 
-  function <%= className %>Controller() {
-    console.log('<%= className %>Controller Constructor');
+  function Controller() {
+    console.log('<%= text %> Controller Constructor');
     ctrl = this;
   }
 
   function $canActivate() {
-    console.log('<%= className %>Controller $canActivate');
+    console.log('<%= text %> Controller $canActivate');
     return true;
   }
 
-  <%= className %>Controller.prototype.$onInit = function() {
-    console.log('<%= className %>Controller $onInit');
-    ctrl.name = '<%= className %>';
+  Controller.prototype.$onInit = function() {
+    console.log('<%= text %> Controller $onInit');
+    ctrl.name = '<%= text %>';
   };
 })();

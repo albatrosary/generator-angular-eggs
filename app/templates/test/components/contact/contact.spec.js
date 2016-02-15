@@ -1,19 +1,19 @@
 (function() {
   'use strict';
 
-  describe('Controller: ContactController', function () {
+  describe('Controller: Contact Component', function () {
 
     beforeEach(module('<%= appname %>.components.contact'));
 
-    var ContactController;
+    var Controller;
 
     beforeEach(inject(function ($controller) {
-      ContactController = $controller('ContactController');
+      Controller = $controller('ContactController');
     }));
 
-    describe('ContactController', function() {
+    describe('Contact Controller', function() {
       it('Test Case', function () {
-        ContactController.activate();
+        Controller.activate();
       });
     });
   });

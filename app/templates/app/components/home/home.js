@@ -8,33 +8,33 @@
 
   angular
     .module('<%= appname %>.components.home', [])
-    .component('homeController', {
-      controller: HomeController,
+    .component('home', {
+      controller: Controller,
       templateUrl: 'components/home/home.html',
       $canActivate: $canActivate
     });
 
-  HomeController.$inject = [];
+  Controller.$inject = [];
 
   var ctrl;
 
   /**
-   * HomeController
+   * Controller
    *
-   * @class HomeController
+   * @class Controller
    * @constructor
    */
-  function HomeController() {
-    console.log('HomeController Constructor');
+  function Controller() {
+    console.log('Home Controller Constructor');
     ctrl = this;
   }
 
   function $canActivate() {
-    console.log('HomeController $canActivate');
+    console.log('Home Controller $canActivate');
     return true;
   }
 
-  HomeController.prototype.$onInit = function() {
-    console.log('HomeController $onInit');
+  Controller.prototype.$onInit = function() {
+    console.log('Home Controller $onInit');
   };
 })();
