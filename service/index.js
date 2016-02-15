@@ -12,13 +12,29 @@ module.exports = yeoman.generators.Base.extend({
     this.className = text.charAt(0).toUpperCase() + text.slice(1);
 
   },
+  prompting: function () {
+    var done = this.async();
+
+    var prompts = [{
+      type: 'input',
+      name: 'directory',
+      message: 'What do you want to do a directory?',
+      default: 'service/' + this.name
+    }];
+
+    this.prompt(prompts, function (props) {
+      this.directory = props.directory;
+
+      done();
+    }.bind(this));
+  },
   js: function () {
-    this.copy('_factory.js', 'app/service/'+this.name+'/'+this.name+'.js');
+    this.copy('_factory.js', 'app/'+this.directory+'/'+this.name+'.js');
   },
   test: function () {
-    this.copy('_factory.spec.js', 'test/service/'+this.name+'/'+this.name+'.spec.js');
+    this.copy('_factory.spec.js', 'test/'+this.directory+'/'+this.name+'.spec.js');
   },
   mock: function () {
-    this.copy('_factory.mock.js', 'test/service/'+this.name+'/'+this.name+'.mock.js');
+    this.copy('_factory.mock.js', 'test/'+this.directory+'/'+this.name+'.mock.js');
   }
 });
