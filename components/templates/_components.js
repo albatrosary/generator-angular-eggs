@@ -22,6 +22,7 @@
   function Controller() {
     console.log('<%= text %> Controller Constructor');
     ctrl = this;
+    ctrl.name = '<%= text %>';
   }
 
   function $canActivate() {
@@ -31,6 +32,6 @@
 
   Controller.prototype.$onInit = function() {
     console.log('<%= text %> Controller $onInit');
-    ctrl.name = '<%= text %>';
+    ctrl.onInit = '<%= text %>';
   };
 })();

@@ -25,6 +25,7 @@
   function Controller() {
     console.log('Contact Controller Constructor');
     ctrl = this;
+    ctrl.name = 'Contact';
   }
 
   function $canActivate() {
@@ -34,7 +35,7 @@
 
   Controller.prototype.$onInit = function() {
     console.log('Contact Controller $onInit');
-
+    ctrl.onInit = 'Success';
     ctrl.case1 = 20;
     someMethod();
   };

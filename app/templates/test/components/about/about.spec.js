@@ -1,57 +1,42 @@
 (function() {
   'use strict';
 
-  describe('Controller: About Component', function () {
+  describe('Component: about', function () {
+
+    var controller, compile, rootScope;
 
     beforeEach(module('<%= appname %>.components.about'));
     beforeEach(module('<%= appname %>.mock.service.gruntfiles'));
+    beforeEach(module('templates'));
 
-    var Controller;
-
-    beforeEach(inject(function ($controller) {
-      Controller = $controller('Controller');
+    beforeEach(inject(function($rootScope, $compile, $componentController) {
+      controller = $componentController;
+      compile = $compile;
+      rootScope = $rootScope;
     }));
 
-    describe('AboutController', function() {
-      it('Set Grunt List', function() {
-        Controller.activate();
-        expect(Controller.list[0].name).toEqual('connect-history-api-fallback');
+    describe('About Controller', function() {
+      it('Test Case', function () {
+        var $scope = {};
+
+        // Controllerの生成
+        var ctrl = controller('about', {$scope: $scope});
+        expect(ctrl.name).toEqual('About');
+
+        // $onInitの実行
+        ctrl.$onInit();
+        expect(ctrl.onInit).toEqual('Success');
       });
     });
 
-    describe('suite', function() {
-      it('spec', function() {
-        // setup
-        var obj = {
-          method: function() {
-            console.log('obj#method()');
-          }
-        };
-
-        spyOn(obj, 'method');
-
-        // exercise
-        obj.method();
-
-        // verify
-        expect(obj.method).toHaveBeenCalled();
-      });
-    });
-
-    describe('suite 2', function() {
-      it('tracks the context', function() {
-        var spy = jasmine.createSpy('spy');
-        var baz = {
-          fn: spy
-        };
-        var quux = {
-          fn: spy
-        };
-        baz.fn(123);
-        quux.fn(456);
-
-        expect(spy.calls.first().object).toBe(baz);
-        expect(spy.calls.mostRecent().object).toBe(quux);
+    // selector
+    describe('About templateUrl', function() {
+      it('Test Case', function () {
+        var factory = compile('<about></about>');
+        var scope = rootScope.$new();
+        var element = factory(scope);
+        scope.$digest();
+        console.log(element);
       });
     });
   });

@@ -20,7 +20,8 @@ module.exports = function(config) {
       // injector:js
       // endinjector
       'app/scripts/main.js',
-      'test/main.spec.js'
+      'test/main.spec.js',
+      'app/**/*.html'
     ],
 
     // list of files to exclude
@@ -30,7 +31,13 @@ module.exports = function(config) {
     // preprocess matching files before serving them to the browser
     // available preprocessors: https://npmjs.org/browse/keyword/karma-preprocessor
     preprocessors: {
+      'app/**/*.html': ['ng-html2js'],
       'app/**/*.js': ['coverage']
+    },
+
+    ngHtml2JsPreprocessor: {
+      stripPrefix: 'app/',
+      moduleName: 'templates'
     },
 
     coverageReporter: {
@@ -59,7 +66,7 @@ module.exports = function(config) {
 
     // start these browsers
     // available browser launchers: https://npmjs.org/browse/keyword/karma-launcher
-    browsers: ['PhantomJS'],
+    browsers: ['PhantomJS2'],
 
     // Continuous Integration mode
     // if true, Karma captures browsers, runs the tests and exits

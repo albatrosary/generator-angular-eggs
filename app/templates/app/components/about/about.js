@@ -26,8 +26,9 @@
    */
   function Controller(GruntfilesService) {
     console.log('About Controller Constructor');
-
-    this.GruntfilesService = GruntfilesService;
+    ctrl = this;
+    ctrl.name = 'About';
+    ctrl.GruntfilesService = GruntfilesService;
   }
 
   /**
@@ -49,8 +50,7 @@
    */
   Controller.prototype.$onInit = function() {
     console.log('About Controller $onInit');
-
-    ctrl = this;
+    ctrl.onInit = 'Success';
     var grunt = this.GruntfilesService.query().$promise;
     grunt
       .then(setlist)

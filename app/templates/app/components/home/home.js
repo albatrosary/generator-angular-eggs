@@ -27,6 +27,7 @@
   function Controller() {
     console.log('Home Controller Constructor');
     ctrl = this;
+    ctrl.name = 'Home';
   }
 
   function $canActivate() {
@@ -36,5 +37,6 @@
 
   Controller.prototype.$onInit = function() {
     console.log('Home Controller $onInit');
+    ctrl.onInit = 'Success';
   };
 })();
