@@ -12,7 +12,6 @@ Angular we have emphasized the development life cycle. It supports the next thin
 * Coverage
 * Metric
 
-
 ## Usage
 
 Install: `npm install -g generator-angular-eggs`
@@ -35,7 +34,6 @@ Available generators:
 - yo angular-eggs:components [name]
 - yo angular-eggs:service [name]
 - yo angular-eggs:resource [name]
-- yo angular-eggs:directives [name]
 - yo angular-eggs:server [name]
  
 ## Notes
@@ -70,16 +68,16 @@ yo angular-eggs:components mycomponents
 
 ## Tasks
 
-- grunt serve
-- grunt serve:dist
-- grunt build
-- grunt test
-- grunt test:watch
-- grunt test:coverage
-- grunt e2e
-- grunt doc
-- grunt metric
-- grunt metric:test
+- npm start
+- npm run serve:dist
+- npm run build
+- npm test
+- npm run test:watch
+- npm run test:coverage
+- npm run e2e
+- npm run doc
+- npm run metric
+- npm run metric:test
 
 ## License
 

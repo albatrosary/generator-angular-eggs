@@ -43,19 +43,19 @@
   ],
   "dependencies": {
     "chalk": "^1.1.1",
-    "generator-jasmine": "^0.2.1",
+    "generator-jasmine": "^0.2.2",
     "generator-mocha": "^0.2.0",
-    "istanbul": "^0.4.0",
+    "istanbul": "^0.4.2",
     "mkdirp": "^0.5.1",
-    "underscore.string": "^3.2.2",
-    "wiredep": "^2.2.2",
-    "yeoman-generator": "^0.21.1",
-    "yosay": "^1.0.5"
+    "underscore.string": "^3.2.3",
+    "wiredep": "^3.0.0",
+    "yeoman-generator": "^0.22.5",
+    "yosay": "^1.1.0"
   },
   "devDependencies": {
     "grunt-cli": "^0.1.13",
-    "mocha": "^2.3.3",
-    "yeoman-assert": "^2.1.0"
+    "mocha": "^2.4.5",
+    "yeoman-assert": "^2.1.1"
   },
   "peerDependencies": {}
 }
