@@ -19,13 +19,6 @@
    * @constructor
    */
   function GruntfilesService($resource) {
-    var gruntfiles = $resource('/api/gruntfiles', {
-      query: {
-        transformResponse: function (data) {
-          return angular.fromJson(data);
-        }
-      }
-    });
-    return gruntfiles;
+    return $resource('/api/gruntfiles');
   }
 })();
