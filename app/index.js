@@ -91,7 +91,7 @@ module.exports = yeoman.generators.Base.extend({
     };
 
     if (this.includeBootstrap) {
-      bower.dependencies.bootstrap = '~4.0.0-alpha';
+      bower.dependencies.bootstrap = '~4.0.0-alpha.2';
     } else {
       bower.dependencies.jquery = '~2.1.4';
     }
