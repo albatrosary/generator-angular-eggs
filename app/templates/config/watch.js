@@ -8,7 +8,7 @@
     },
     js: {
       files: ['<%%= paths.app %>/{,directives,service,components}/{,*/}*.js'],
-      tasks: ['jshint', 'jscs'],
+      tasks: ['eslint', 'jscs'],
       options: {
         livereload: true
       }
