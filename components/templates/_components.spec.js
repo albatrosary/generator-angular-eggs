@@ -31,7 +31,7 @@
     // selector
     describe('<%= className %> templateUrl', function() {
       it('Test Case', function () {
-        var factory = compile('<<%= name %>></<%= name %>>');
+        var factory = compile('<<%= dashCase %>></<%= dashCase %>>');
         var scope = rootScope.$new();
         var element = factory(scope);
         scope.$digest();
