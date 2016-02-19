@@ -34,12 +34,13 @@
     "front-end",
     "h5bp",
     "bootstrap",
-    "modernizr",
     "jquery",
     "grunt",
+    "bower",
     "angular",
-    "angular-new-router",
-    "express"
+    "ngComponentRouter",
+    "express",
+    "TingoDB"
   ],
   "dependencies": {
     "chalk": "^1.1.1",
