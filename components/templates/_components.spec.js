@@ -18,9 +18,10 @@
       it('Test Case', function () {
         var $scope = {};
 
-        // Controllerの生成
-        var ctrl = controller('<%= name %>', {$scope: $scope});
-        expect(ctrl.name).toEqual('<%= className %>');
+        // Controllerの生成<% if (sub===undefined) { %>
+        var ctrl = controller('<%= text %>', {$scope: $scope});<% } else {%>
+        var ctrl = controller('<%= sub %>', {$scope: $scope});<% } %>
+        expect(ctrl.name).toEqual('<%= text %> <%= sub %>');
 
         // $onInitの実行
         ctrl.$onInit();

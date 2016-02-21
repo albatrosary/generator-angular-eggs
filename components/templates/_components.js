@@ -8,10 +8,11 @@
   'use strict';
 
   angular
-    .module('<%= appname %>.components.<%= text %>', [])
-    .component('<%= text %>', {
+    .module('<%= appname %>.components.<%= text %>'<% if (sub===undefined) { %>, [])
+    .component('<%= text %>', {<% } else { %>)
+    .component('<%= sub %>', {<% } %>
       controller: Controller,
-      templateUrl: 'components/<%= name %>/<%= name %>.html',
+      templateUrl: 'components/<%= name %>/<%= filename %>.html',
       $canActivate: $canActivate
     });
 
@@ -20,18 +21,18 @@
   var ctrl;
 
   function Controller() {
-    console.log('<%= text %> Controller Constructor');
+    console.log('<%= text %> <%= sub %> Controller Constructor');
     ctrl = this;
-    ctrl.name = '<%= text %>';
+    ctrl.name = '<%= text %> <%= sub %>';
   }
 
   function $canActivate() {
-    console.log('<%= text %> Controller $canActivate');
+    console.log('<%= text %> <%= sub %> Controller $canActivate');
     return true;
   }
 
   Controller.prototype.$onInit = function() {
-    console.log('<%= text %> Controller $onInit');
-    ctrl.onInit = '<%= text %>';
+    console.log('<%= text %> <%= sub %> Controller $onInit');
+    ctrl.onInit = 'Success';
   };
 })();

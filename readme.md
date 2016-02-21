@@ -31,7 +31,7 @@ yo angular-eggs
 
 Available generators:
 
-- yo angular-eggs:components [name]
+- yo angular-eggs:components [name] [name(option)]
 - yo angular-eggs:service [name]
 - yo angular-eggs:resource [name]
 - yo angular-eggs:server [name]
@@ -56,14 +56,24 @@ test/components/appname/appname.spec.js
 
 Component name is `appName`. So CustomTag name is `app-name`
 
-### Components
+## Components
 
-Generates an Angular Components, as the Angular Module name is Sample.
+Case `yo angular2-eggs:components appComp`
 
-Example:
-
+make file
+```bash
+app/components/appcomp/appcomp.js
+app/components/appcomp/appcomp.html
+test/components/appcomp/appcomp.spec.js
 ```
-yo angular-eggs:components mycomponents
+
+Case `yo angular2-eggs:components appComp subComp`
+
+make file
+```bash
+app/components/appcomp/appcomp.subcomp.ts
+app/components/appcomp/appcomp.subcomp.html
+test/components/appcomp/appcomp.subcomp.spec.ts
 ```
 
 ## Tasks
