@@ -8,9 +8,9 @@ function dashCase(str) {
     return str.replace(/[A-Z]/g, function (match) { return '-' + match.toLowerCase(); });
 }
 
-module.exports = yeoman.generators.Base.extend({
+module.exports = yeoman.Base.extend({
   constructor: function () {
-    yeoman.generators.Base.apply(this, arguments);
+    yeoman.Base.apply(this, arguments);
     var text = arguments[0][0];
     var sub = arguments[0][1];
     this.sub = sub;
