@@ -16,7 +16,7 @@
     ])
     .controller('AppController', AppController);
 
-  AppController.$inject = ['$router'];
+  AppController.$inject = ['$rootRouter'];
 
   /**
    * AppController
