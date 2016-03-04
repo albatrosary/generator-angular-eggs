@@ -25,8 +25,8 @@
    * @main <%= appname %>
    * @constructor
    */
-  function AppController ($router) {
-    $router.config([
+  function AppController ($rootRouter) {
+    $rootRouter.config([
       {
         path: '/home',
         name:'Home',

@@ -38,7 +38,7 @@
    * @method canActivate
    */
   function $canActivate () {
-    console.log('About Controller canActivate Method');
+    console.log('About Controller canActivate');
     return true;
   }
 
@@ -85,5 +85,27 @@
    */
   var error = function (e) {
     ctrl.error = e;
+  };
+
+  Controller.prototype.$routerOnActivate = function() {
+    console.log('About Controller $routerOnActivate');
+  };
+
+  Controller.prototype.$routerCanReuse = function () {
+    console.log('About Controller $routerCanReuse');
+    return true;
+  }
+
+  Controller.prototype.$routerOnReuse = function() {
+    console.log('About Controller $routerOnReuse');
+  };
+
+  Controller.prototype.$routerCanDeactivate = function () {
+    console.log('About Controller $routerCanDeactivate');
+    return true;
+  }
+
+  Controller.prototype.$routerOnDeactivate = function() {
+    console.log('About Controller $routerOnDeactivate');
   };
 })();

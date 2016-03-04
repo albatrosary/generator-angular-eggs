@@ -53,4 +53,26 @@
   var someMethod = function () {
     ctrl.case2 = 10;
   };
+
+  Controller.prototype.$routerOnActivate = function() {
+    console.log('Contact Controller $routerOnActivate');
+  };
+
+  Controller.prototype.$routerCanReuse = function () {
+    console.log('Contact Controller $routerCanReuse');
+    return true;
+  }
+
+  Controller.prototype.$routerOnReuse = function() {
+    console.log('Contact Controller $routerOnReuse');
+  };
+
+  Controller.prototype.$routerCanDeactivate = function () {
+    console.log('Contact Controller $routerCanDeactivate');
+    return true;
+  }
+
+  Controller.prototype.$routerOnDeactivate = function() {
+    console.log('Contact Controller $routerOnDeactivate');
+  };
 })();
