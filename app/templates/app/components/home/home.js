@@ -41,24 +41,24 @@
   };
 
   Controller.prototype.$routerOnActivate = function() {
-    console.log('Contact Controller $routerOnActivate');
+    console.log('Home Controller $routerOnActivate');
   };
 
   Controller.prototype.$routerCanReuse = function () {
-    console.log('Contact Controller $routerCanReuse');
+    console.log('Home Controller $routerCanReuse');
     return true;
   }
 
   Controller.prototype.$routerOnReuse = function() {
-    console.log('Contact Controller $routerOnReuse');
+    console.log('Home Controller $routerOnReuse');
   };
 
   Controller.prototype.$routerCanDeactivate = function () {
-    console.log('Contact Controller $routerCanDeactivate');
+    console.log('Home Controller $routerCanDeactivate');
     return true;
   }
 
   Controller.prototype.$routerOnDeactivate = function() {
-    console.log('Contact Controller $routerOnDeactivate');
+    console.log('Home Controller $routerOnDeactivate');
   };
 })();
