@@ -1,6 +1,6 @@
 {
   "name": "generator-angular-eggs",
-  "version": "2.3.1",
+  "version": "2.3.2",
   "description": "Angular 1.5, Angular Component Router, Bootstrap v4(alpha) and TingoDB(like MongoDB) with an Express server",
   "license": "MIT",
   "author": {
@@ -50,12 +50,12 @@
     "istanbul": "^0.4.2",
     "mkdirp": "^0.5.1",
     "underscore.string": "^3.2.3",
-    "wiredep": "^3.0.0",
+    "wiredep": "^4.0.0",
     "yeoman-generator": "^0.22.5",
     "yosay": "^1.1.0"
   },
   "devDependencies": {
-    "grunt-cli": "^0.1.13",
+    "grunt-cli": "^1.1.0",
     "mocha": "^2.4.5",
     "yeoman-assert": "^2.1.1"
   },
