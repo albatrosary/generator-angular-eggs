@@ -26,7 +26,7 @@
    */
   function Controller(GruntfilesService) {
     console.log('About Controller Constructor');
-    ctrl = this;
+    var ctrl = this;
     ctrl.name = 'About';
     ctrl.GruntfilesService = GruntfilesService;
   }
@@ -49,6 +49,7 @@
    * @method $onInit
    */
   Controller.prototype.$onInit = function() {
+    var ctrl = this;
     console.log('About Controller $onInit');
     ctrl.onInit = 'Success';
     var grunt = this.GruntfilesService.query().$promise;
@@ -58,14 +59,6 @@
   };
 
   /**
-   * Angular ViewModel
-   *
-   * @property ctrl
-   * @private
-   */
-  var ctrl;
-
-  /**
    * Setting the retrieved Gruntfile list to ViewModel
    *
    * @method setlist
@@ -73,6 +66,7 @@
    * @private
    */
   var setlist = function (list) {
+    var ctrl = this;
     ctrl.list = list;
   };
 
@@ -84,6 +78,7 @@
    * @private
    */
   var error = function (e) {
+    var ctrl = this;
     ctrl.error = e;
   };
 

@@ -18,11 +18,9 @@
 
   Controller.$inject = [];
 
-  var ctrl;
-
   function Controller() {
     console.log('<%= text %> <%= sub %> Controller Constructor');
-    ctrl = this;
+    var ctrl = this;
     ctrl.name = '<%= text %> <%= sub %>';
   }
 
@@ -32,6 +30,7 @@
   }
 
   Controller.prototype.$onInit = function() {
+    var ctrl = this;
     console.log('<%= text %> <%= sub %> Controller $onInit');
     ctrl.onInit = 'Success';
   };

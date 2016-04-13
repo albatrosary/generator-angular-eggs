@@ -23,8 +23,8 @@
    * @constructor
    */
   function Controller() {
+    var ctrl = this;
     console.log('Contact Controller Constructor');
-    ctrl = this;
     ctrl.name = 'Contact';
   }
 
@@ -34,6 +34,7 @@
   }
 
   Controller.prototype.$onInit = function() {
+    var ctrl = this;
     console.log('Contact Controller $onInit');
     ctrl.onInit = 'Success';
     ctrl.case1 = 20;
@@ -41,16 +42,11 @@
   };
 
   /**
-   * @property ctrl
-   * @private
-   */
-  var ctrl;
-
-  /**
    * @method someMethod
    * @private
    */
   var someMethod = function () {
+    var ctrl = this;
     ctrl.case2 = 10;
   };
 

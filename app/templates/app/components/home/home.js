@@ -16,8 +16,6 @@
 
   Controller.$inject = [];
 
-  var ctrl;
-
   /**
    * Controller
    *
@@ -26,7 +24,7 @@
    */
   function Controller() {
     console.log('Home Controller Constructor');
-    ctrl = this;
+    var ctrl = this;
     ctrl.name = 'Home';
   }
 
@@ -36,6 +34,7 @@
   }
 
   Controller.prototype.$onInit = function() {
+    var ctrl = this;
     console.log('Home Controller $onInit');
     ctrl.onInit = 'Success';
   };
