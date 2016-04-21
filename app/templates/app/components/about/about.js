@@ -54,32 +54,12 @@
     ctrl.onInit = 'Success';
     var grunt = this.GruntfilesService.query().$promise;
     grunt
-      .then(setlist)
-      .catch(error);
-  };
-
-  /**
-   * Setting the retrieved Gruntfile list to ViewModel
-   *
-   * @method setlist
-   * @param {Object} list Gruntfile list
-   * @private
-   */
-  var setlist = function (list) {
-    var ctrl = this;
-    ctrl.list = list;
-  };
-
-  /**
-   * It will capture the error at the time of Gruntfile data acquisition
-   *
-   * @method error
-   * @param {Object} e error message
-   * @private
-   */
-  var error = function (e) {
-    var ctrl = this;
-    ctrl.error = e;
+      .then(function (list) {
+        ctrl.list = list;
+      })
+      .catch(function (e) {
+        ctrl.e = e;
+      });
   };
 
   Controller.prototype.$routerOnActivate = function() {

@@ -38,15 +38,6 @@
     console.log('Contact Controller $onInit');
     ctrl.onInit = 'Success';
     ctrl.case1 = 20;
-    someMethod();
-  };
-
-  /**
-   * @method someMethod
-   * @private
-   */
-  var someMethod = function () {
-    var ctrl = this;
     ctrl.case2 = 10;
   };
 
